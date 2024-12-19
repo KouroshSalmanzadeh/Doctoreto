@@ -1,12 +1,12 @@
 import React, { SVGProps } from "react";
 
-export default function doctoretoLogo(props: SVGProps<SVGSVGElement>) {
+export default function DoctoretoLogo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
-      width="256px"
-      height="256px"
+      width="1em"
+      height="1em"
       {...props}
     >
       <path

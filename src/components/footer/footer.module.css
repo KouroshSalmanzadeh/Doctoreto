@@ -29,6 +29,10 @@
     .certificates {
       display: flex;
       gap: 2rem;
+
+      > li {
+        mix-blend-mode: difference;
+      }
     }
 
     .socials {

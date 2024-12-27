@@ -21,42 +21,42 @@ export default function HeaderComponent(): ReactElement {
   const [theme, setTheme] = useState<boolean>(false);
 
   useEffect(() => {
-    const activeElement = document.querySelector(`a.${styles.active}`) as HTMLElement | null;
+    const activeElement = document.querySelector(
+      `a.${styles.active}`,
+    ) as HTMLElement | null;
 
     if (activeElement) {
       const width = activeElement.offsetWidth;
       document.documentElement.style.setProperty("--line-li", `${width}px`);
-  
-      const leftOffset = activeElement.offsetLeft;
-      document.documentElement.style.setProperty("--offset-left", `${leftOffset}px`);
-    }
 
+      const leftOffset = activeElement.offsetLeft;
+      document.documentElement.style.setProperty(
+        "--offset-left",
+        `${leftOffset}px`,
+      );
+    }
   }, [pathname]);
 
   const changeTheme = async () => {
-
     // * Return early if View Transition API is not supported
     //  * or user prefers reduced motion
     if (
-        !ref.current ||
-        !document.startViewTransition ||
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      !ref.current ||
+      !document.startViewTransition ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
       setTheme(theme);
       return;
     }
 
-    await document.startViewTransition(()=>{
-      flushSync(()=>{
+    await document.startViewTransition(() => {
+      flushSync(() => {
         if (theme) {
-
           setTheme(!theme);
           document.documentElement.setAttribute("data-theme", "dark");
-
         } else {
-
           setTheme(!theme);
-          document.documentElement.setAttribute("data-theme", "light")
+          document.documentElement.setAttribute("data-theme", "light");
         }
       });
     }).ready;
@@ -82,14 +82,13 @@ export default function HeaderComponent(): ReactElement {
         },
         {
           duration: 500,
-          easing: 'ease-in-out',
-          pseudoElement: '::view-transition-new(root)',
-        }
+          easing: "ease-in-out",
+          pseudoElement: "::view-transition-new(root)",
+        },
       );
     }
   };
 
-  
   return (
     <header className={styles.header}>
       <nav>
@@ -107,8 +106,16 @@ export default function HeaderComponent(): ReactElement {
         </ul>
       </nav>
       <div className={styles.section_left_nav}>
-        <label ref={ref} htmlFor={styles.input_toggle_nav} className={styles.toggle_theme}>
-          <input type="checkbox" id={styles.input_toggle_nav} onClick={changeTheme} />
+        <label
+          ref={ref}
+          htmlFor={styles.input_toggle_nav}
+          className={styles.toggle_theme}
+        >
+          <input
+            type="checkbox"
+            id={styles.input_toggle_nav}
+            onClick={changeTheme}
+          />
           <MingcuteSunFill className={styles.theme_icon_light} />
           <MingcuteMoonFill className={styles.theme_icon_dark} />
         </label>

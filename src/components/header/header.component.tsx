@@ -35,6 +35,17 @@ export default function HeaderComponent(): ReactElement {
 
   const changeTheme = async () => {
 
+    // * Return early if View Transition API is not supported
+    //  * or user prefers reduced motion
+    if (
+        !ref.current ||
+        !document.startViewTransition ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      setTheme(theme);
+      return;
+    }
+
     await document.startViewTransition(()=>{
       flushSync(()=>{
         if (theme) {

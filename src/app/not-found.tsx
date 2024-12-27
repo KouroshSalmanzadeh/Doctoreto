@@ -10,15 +10,15 @@ import GlobalSearchBoxComponent from '@/components/global-search-box/global-sear
 export default function NotFound (): ReactElement {
   return (
     <div className={styles.not_found}>
-        <div className={styles.vector}>
-            <Image src={notFoundImg} alt='' />
-        </div>
         <div className={styles.text}>
             <h2>صفحه مورد نظر یافت نشد!</h2>
             <p>لطفا از طریق کادر جستجو، دکتر یا مرکز درمانی مد نظر خود را جستجو کنید.</p>
         </div>
         <div className={styles.search_box}>
             <GlobalSearchBoxComponent />
+        </div>
+        <div className={styles.vector}>
+            <Image src={notFoundImg} alt='' />
         </div>
     </div>
   )

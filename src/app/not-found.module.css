@@ -1,6 +1,6 @@
 .not_found {
     display: grid;
-    grid-template-areas: "vector text" "vector search_box";
+    grid-template-areas: "text vector" "search_box vector";
     place-content: center;
     align-items: center;
     gap: 2rem;

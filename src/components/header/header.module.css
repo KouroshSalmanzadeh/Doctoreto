@@ -3,12 +3,43 @@
   align-items: center;
   gap: 2rem;
 
+  width: 90%;
+  max-height: 5rem;
+
+  padding: 0 1rem;
+
+  inset: 0;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  border-radius: 1.5rem;
+
+  position: fixed;
+
+  background: hsla(0, 0%, 0%, 0.25);
+
+  backdrop-filter: blur(6px);
+
   padding-block: 1rem;
 
   nav {
     > ul {
       display: flex;
       gap: 2rem;
+
+      padding-right: 0.5rem;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: var(--color-primary);
+        border-radius: 999rem;
+        width: var(--line-li);
+        height: 0.2rem;
+        bottom: 20%;
+        left: var(--offset-left);
+        transition: 0.5s ease;
+      }
 
       > li {
         a {
@@ -20,23 +51,117 @@
     }
   }
 
-  .cta {
-    background-color: transparent;
-    color: var(--color-primary);
+  .section_left_nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 
     margin-inline-start: auto;
-    padding: 0.5rem 1rem;
 
-    border: 1px solid currentcolor;
-    border-radius: var(--border-radius);
+    .toggle_theme {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
 
-    font-weight: 700;
+      width: 3em;
+      height: 3em;
 
-    cursor: pointer;
+      position: relative;
 
-    &:hover {
-      background-color: var(--color-primary);
-      color: var(--color-primary-opposite);
+      padding: 0.5rem;
+
+      cursor: pointer;
+
+      border-radius: 999rem;
+
+      background-color: var(--color-gray-20);
+
+      box-shadow:
+        inset 0 8px 60px hsla(0, 0%, 0%, 0.1),
+        inset 0 8px 8px hsla(0, 0%, 0%, 0.1),
+        inset 0 -4px 4px hsla(0, 0%, 0%, 0.1);
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 80%;
+        left: -1rem;
+        background-color: var(--color-gray-40);
+      }
+
+      #input_toggle_nav {
+        position: absolute;
+
+        opacity: 0;
+
+        & ~ .theme_icon_dark {
+          opacity: 1;
+          visibility: visible;
+
+          transform: rotate(0deg) scale(1);
+          transition-delay: 0.3s;
+        }
+
+        & ~ .theme_icon_light {
+          opacity: 0;
+          visibility: hidden;
+
+          transform: rotate(-360deg) scale(0);
+          transition-delay: 0s;
+        }
+
+        &:checked ~ .theme_icon_dark {
+          opacity: 0;
+          visibility: hidden;
+
+          transform: rotate(360deg) scale(0);
+          transition-delay: 0s;
+        }
+
+        &:checked ~ .theme_icon_light {
+          opacity: 1;
+          visibility: visible;
+
+          transform: rotate(0deg) scale(1);
+          transition-delay: 0.3s;
+        }
+      }
+
+      .theme_icon_dark,
+      .theme_icon_light {
+        color: white;
+
+        width: 2em;
+        height: 2em;
+
+        position: absolute;
+
+        inset: 0;
+        margin: auto;
+
+        transition: 0.5s ease;
+      }
+    }
+
+    .cta {
+      background-color: transparent;
+      color: var(--color-primary);
+
+      padding: 0.5rem 1rem;
+
+      border: 1px solid currentcolor;
+      border-radius: var(--border-radius);
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-primary-opposite);
+        border: 1px solid transparent;
+      }
     }
   }
 }

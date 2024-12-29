@@ -60,24 +60,27 @@ export default function HeaderComponent(): ReactElement {
         }
       });
     }).ready;
-    if (ref.current) {
-      const { top, right } = ref.current.getBoundingClientRect();
-      const x = right;
-      const y = top;
-      const left = window.innerWidth - right;
-      const bottom = window.innerHeight - top;
 
-      // Calculates the radius of circle that can cover the screen
+    if (ref.current) {
+      const parent = ref.current.parentElement;
+      if (!parent) return;
+      const { top, left, width, height } = parent.getBoundingClientRect();
+
+      // محاسبه مرکز عنصر
+      const centerX = left + width - 25;
+      const centerY = top + height - 25;
+
+      // محاسبه شعاع بزرگترین دایره
       const maxRadius = Math.hypot(
-        Math.max(left, right),
-        Math.max(top, bottom),
+        Math.max(centerX, window.innerWidth - centerX),
+        Math.max(centerY, window.innerHeight - centerY),
       );
 
       document.documentElement.animate(
         {
           clipPath: [
-            `circle(0px at ${x}px ${y}px)`,
-            `circle(${maxRadius}px at ${x}px ${y}px)`,
+            `circle(0px at ${centerX}px ${centerY}px)`,
+            `circle(${maxRadius}px at ${centerX}px ${centerY}px)`,
           ],
         },
         {

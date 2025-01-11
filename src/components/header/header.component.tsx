@@ -19,11 +19,10 @@ export default function HeaderComponent(): ReactElement {
   const ref = useRef<HTMLLabelElement>(null);
 
   const [theme, setTheme] = useState<boolean>(false);
-  
+
   const [resize, setResize] = useState<number>(0);
 
   useEffect(() => {
-
     const handleResize = () => {
       setResize(window.innerWidth);
     };
@@ -37,7 +36,6 @@ export default function HeaderComponent(): ReactElement {
   }, []);
 
   useEffect(() => {
-    
     const activeElement = document.querySelector(
       `a.${styles.active}`,
     ) as HTMLElement | null;

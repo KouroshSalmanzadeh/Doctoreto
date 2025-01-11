@@ -1,31 +1,31 @@
 .filterbadges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  padding-bottom: 1rem;
+
+  .badge {
     display: flex;
-    gap: .5rem;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: var(--color-gray-16);
 
-    padding-bottom: 1rem;
+    opacity: 0.5;
 
-    .badge {
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-        background-color: var(--color-gray-16);
+    padding: 0 0.5rem;
 
-        opacity: 0.5;
+    border-radius: 999rem;
 
-        padding: 0 0.5rem;
+    cursor: pointer;
 
-        border-radius: 999rem;
+    font-size: var(--fz-200);
+    font-weight: 300;
 
-        cursor: pointer;
+    transition: all ease 0.2s;
 
-        font-size: var(--fz-200);
-        font-weight: 300;
-
-        transition: all ease 0.2s;
-
-        &:hover {
-            opacity: 0.3;
-        }
+    &:hover {
+      opacity: 0.3;
     }
+  }
 }

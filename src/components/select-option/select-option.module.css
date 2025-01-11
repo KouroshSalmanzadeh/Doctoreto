@@ -1,97 +1,96 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-    position: relative;
+  position: relative;
 
-    label {
-        font-size: var(--fz-400);
-        font-weight: 600;
+  label {
+    font-size: var(--fz-400);
+    font-weight: 600;
+  }
+
+  input.select {
+    border-radius: 8px;
+
+    font-weight: 300;
+
+    padding: 0.5rem 1rem;
+
+    background-color: var(--color-gray-12);
+    color: var(--color-gray-98);
+
+    outline: none;
+    border: none;
+
+    &:focus {
+      outline: 1px solid var(--color-primary);
+      /* background-color: var(--color-gray-16); */
     }
+  }
 
-    input.select {
-        border-radius: 8px;
+  svg {
+    position: absolute;
 
-        font-weight: 300;
+    left: 15px;
+    top: 45px;
 
-        padding: 0.5rem 1rem;
+    cursor: pointer;
 
-        background-color: var(--color-gray-12);
-        color: var(--color-gray-98);
+    transition: all ease 0.2s;
+    &:hover {
+      transform: rotate(90deg) scale(1.5);
 
-        outline: none;
-        border: none;
-
-        &:focus {
-            outline: 1px solid var(--color-primary);
-            /* background-color: var(--color-gray-16); */
-        }
+      color: var(--color-primary);
     }
+  }
 
-    svg {
-        position: absolute;
-        
-        left: 15px;
-        top: 45px;
+  .container-list {
+    width: 100%;
 
+    position: absolute;
+
+    height: fit-content;
+    max-height: 20rem;
+
+    top: 120%;
+
+    z-index: 10;
+
+    background-color: var(--color-gray-10);
+
+    outline: 2px solid var(--color-gray-16);
+
+    padding: 0.5rem;
+
+    border-radius: 8px;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+
+      height: fit-content;
+      max-height: 18.5rem;
+
+      padding: 0.2rem 0;
+
+      overflow-y: auto;
+
+      .item {
         cursor: pointer;
-
-        transition: all ease .2s;
-        &:hover {
-            transform: rotate(90deg) scale(1.5);
-
-            color: var(--color-primary);
-        }
-    }
-
-    .container-list {
-
-        width: 100%;
-
-        position: absolute;
-
-        height: fit-content;
-        max-height: 20rem;
-
-        top: 120%;
-
-        z-index: 10;
-
-        background-color: var(--color-gray-10);
-
-        outline: 2px solid var(--color-gray-16);
 
         padding: 0.5rem;
 
-        border-radius: 8px;
+        color: var(--color-gray-70);
 
-        .list {
-            display: flex;
-            flex-direction: column;
-            
-            height: fit-content;
-            max-height: 18.5rem;
+        border-radius: 6px;
 
-            padding: .2rem 0;
-    
-            overflow-y: auto;
-
-            .item {
-                cursor: pointer;
-
-                padding: .5rem;
-
-                color: var(--color-gray-70);
-
-                border-radius: 6px;
-
-                &:hover {
-                    background-color: var(--color-primary);
-                    color: white;
-                    font-weight: 700;
-                }
-            }
+        &:hover {
+          background-color: var(--color-primary);
+          color: white;
+          font-weight: 700;
         }
+      }
     }
+  }
 }

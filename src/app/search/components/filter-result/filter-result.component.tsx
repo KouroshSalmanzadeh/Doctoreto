@@ -22,15 +22,25 @@ export default function FilterResultComponent() {
   const [filteredDoctors, setFilteredDoctors] = useState(doctors);
 
   useEffect(() => {
-      const filtered = doctors.filter(doctor => {
-          const matchesServiceType = selectedFilters.serviceType === "" || doctor.serviceType.includes(selectedFilters.serviceType);
-          const matchesSpecialtie = selectedFilters.specialtie === "" || doctor.specialtie === selectedFilters.specialtie;
-          const matchesService = selectedFilters.service === "" || doctor.services.includes(selectedFilters.service);
+    const filtered = doctors.filter((doctor) => {
+      const matchesServiceType =
+        selectedFilters.serviceType === "" ||
+        doctor.serviceType.includes(selectedFilters.serviceType);
+      const matchesSpecialtie =
+        selectedFilters.specialtie === "" ||
+        doctor.specialtie === selectedFilters.specialtie;
+      const matchesService =
+        selectedFilters.service === "" ||
+        doctor.services.includes(selectedFilters.service);
 
-          return matchesServiceType && matchesSpecialtie && matchesService;
-      });
-      setFilteredDoctors(filtered);
-  }, [selectedFilters.service, selectedFilters.serviceType, selectedFilters.specialtie]);
+      return matchesServiceType && matchesSpecialtie && matchesService;
+    });
+    setFilteredDoctors(filtered);
+  }, [
+    selectedFilters.service,
+    selectedFilters.serviceType,
+    selectedFilters.specialtie,
+  ]);
 
   return (
     <div className={styles.result}>
@@ -46,7 +56,7 @@ export default function FilterResultComponent() {
                   <MingcuteStarFill />
                   <b>{`${doctor.star}`}</b>
                 </span>
-                  <h6> {` (${doctor.reviewCount} نظر)`}</h6>
+                <h6> {` (${doctor.reviewCount} نظر)`}</h6>
               </div>
             </div>
             <div className={styles.left_box}>
@@ -54,10 +64,20 @@ export default function FilterResultComponent() {
               <p>تخصص: {doctor.specialtie}</p>
               <p>خدمات: {doctor.services.join(", ")}</p>
               <p className={styles.service_types}>
-                {doctor.serviceType.map((item, i)=> (
+                {doctor.serviceType.map((item, i) => (
                   <span key={i}>
-                    {item === "in_person" ? "حضوری" : item === "online" ? "چت آنلاین" : "تلفنی"}
-                    {item === "in_person" ? <MingcuteStethoscopeLine /> : item === "online" ? <MingcuteChat1Line /> : <MingcutePhoneCallLine />}
+                    {item === "in_person"
+                      ? "حضوری"
+                      : item === "online"
+                        ? "چت آنلاین"
+                        : "تلفنی"}
+                    {item === "in_person" ? (
+                      <MingcuteStethoscopeLine />
+                    ) : item === "online" ? (
+                      <MingcuteChat1Line />
+                    ) : (
+                      <MingcutePhoneCallLine />
+                    )}
                   </span>
                 ))}
               </p>
@@ -71,21 +91,25 @@ export default function FilterResultComponent() {
               </span>
               {doctor.address}
             </div>
-            {doctor.price && <div className={styles.item_detail}>
-              <span>
-                <MingcuteCashLine />
-                هزینه ویزیت:
-              </span>
-              {doctor.price + " "}
-              تومان
-            </div>}
-            {doctor.lastFreeTime && <div className={styles.item_detail}>
-              <span>
-                <MingcuteCalendarTimeAddLine />
-                اولین نوبت آزاد:
-              </span>
-              {doctor.lastFreeTime}
-            </div>}
+            {doctor.price && (
+              <div className={styles.item_detail}>
+                <span>
+                  <MingcuteCashLine />
+                  هزینه ویزیت:
+                </span>
+                {doctor.price + " "}
+                تومان
+              </div>
+            )}
+            {doctor.lastFreeTime && (
+              <div className={styles.item_detail}>
+                <span>
+                  <MingcuteCalendarTimeAddLine />
+                  اولین نوبت آزاد:
+                </span>
+                {doctor.lastFreeTime}
+              </div>
+            )}
           </div>
           <div className={styles.buttons}>
             <button>دریافت مشاوره</button>

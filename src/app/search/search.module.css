@@ -1,0 +1,51 @@
+.page {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+    gap: 1rem;
+
+    padding-top: 8rem;
+
+    min-block-size: 100%;
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: var(--color-gray-10);
+
+        position: sticky;
+
+        height: fit-content;
+
+        padding: 1rem;
+
+        box-shadow: var(--box-shadow-normal);
+
+        border-radius: var(--border-radius);
+
+        top: 8rem;
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        .type_search {
+            margin-bottom: 1.5rem;
+        }
+
+        .card:not(:last-child) {
+            border-bottom: 1px solid var(--color-gray-16);
+            margin-bottom: 1rem;
+            padding-bottom: 1.5rem;
+        }
+
+    }
+
+}

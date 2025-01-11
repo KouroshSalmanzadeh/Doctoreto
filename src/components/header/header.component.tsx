@@ -19,8 +19,25 @@ export default function HeaderComponent(): ReactElement {
   const ref = useRef<HTMLLabelElement>(null);
 
   const [theme, setTheme] = useState<boolean>(false);
+  
+  const [resize, setResize] = useState<number>(0);
 
   useEffect(() => {
+
+    const handleResize = () => {
+      setResize(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    
     const activeElement = document.querySelector(
       `a.${styles.active}`,
     ) as HTMLElement | null;
@@ -35,7 +52,7 @@ export default function HeaderComponent(): ReactElement {
         `${leftOffset}px`,
       );
     }
-  }, [pathname]);
+  }, [pathname, resize]);
 
   const changeTheme = async () => {
     // * Return early if View Transition API is not supported

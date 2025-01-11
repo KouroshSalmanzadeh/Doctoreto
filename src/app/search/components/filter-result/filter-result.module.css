@@ -1,0 +1,182 @@
+.result {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .doctorCard {
+        display: flex;
+        flex-direction: column;
+
+        background: var(--color-gray-10);
+
+        border-radius: var(--border-radius);
+        
+        box-shadow: var(--box-shadow-normal);
+        
+        padding: 1rem;
+
+        .info {
+            display: flex;
+            gap: 1rem;
+
+            border-bottom: 1px solid var(--color-gray-16);
+
+            padding-bottom: 1rem;
+
+            .right_box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .4rem;
+
+                .profile {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    width: 4.5rem;
+                    height: 4.5rem;
+        
+                    border-radius: 999rem;
+        
+                    background-color: var(--color-gray-12);
+        
+                    /* border: 2px solid var(--color-primary); */
+        
+                    svg {
+                        width: 2.5rem;
+                        height: 2.5rem;
+        
+                        color: var(--color-gray-16);
+                    }
+                }
+    
+                .rate {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    svg {
+                        width: 1.5rem;
+                        height: 1.5rem;
+
+                        color: gold;
+                    }
+
+                    span {
+                        display: flex;
+                        justify-content: center;
+                        gap: 0.2rem;
+                    }
+
+                    b {
+                        color: var(--color-primary);
+                        font-size: 1.2rem;
+                    }
+
+                    h6 {
+                        text-align: center;
+                        margin-top: -0.2rem;
+                    }
+                }
+            }
+
+            .left_box {
+
+                p {
+                    font-size: var(--fz-200);
+                }
+                
+                .service_types {
+                    display: flex;
+                    align-items: center;
+                    gap: .3rem;
+    
+                    margin-top: 1.3rem;
+    
+                    span {
+                        display: flex;
+                        align-items: center;
+                        gap: .3rem;
+    
+                        background-color: var(--color-gray-16);
+                        
+                        padding: 0 .7rem;
+    
+                        border-radius: 999rem;
+    
+                        opacity: 0.7;
+    
+                        svg {
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            margin-top: 1rem;
+
+            .item_detail {
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+
+                font-size: 0.8rem;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
+
+                font-size: 1rem;
+                font-weight: 600;
+
+                color: var(--color-primary);
+            }
+
+            svg {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+
+            margin-top: 1rem;
+
+            button {
+                width: 100%;
+                
+                padding: 0.3rem;
+
+                border-radius: 6px;
+                
+                background-color: var(--color-primary);
+                
+                outline: none;
+                border: none;
+
+                cursor: pointer;
+
+                transition: all ease 0.2s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}

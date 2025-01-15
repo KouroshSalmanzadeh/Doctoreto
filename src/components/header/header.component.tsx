@@ -68,10 +68,10 @@ export default function HeaderComponent(): ReactElement {
       flushSync(() => {
         if (theme) {
           setTheme(!theme);
-          document.documentElement.setAttribute("data-theme", "dark");
+          document.documentElement.setAttribute("data-theme", "light");
         } else {
           setTheme(!theme);
-          document.documentElement.setAttribute("data-theme", "light");
+          document.documentElement.setAttribute("data-theme", "dark");
         }
       });
     }).ready;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useContext, useEffect, useState } from "react";
+
 import styles from "./filter-result.module.css";
 
 import doctors from "@/data/doctors.json";
@@ -15,6 +16,11 @@ import MingcuteStarFill from "@/icons/MingcuteStarFill";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 import MingcuteCashLine from "@/icons/MingcuteCashLine";
 import MingcuteCalendarTimeAddLine from "@/icons/MingcuteCalendarTimeAddLine";
+
+import NotfoundSearch from "@/assets/illastrations/not-found-search.svg";
+import Image from "next/image";
+import MingcuteLeftFill from "@/icons/MingcuteLeftFill";
+import Link from "next/link";
 
 export default function FilterResultComponent() {
   const { selectedFilters } = useContext(FilterContext);
@@ -44,44 +50,50 @@ export default function FilterResultComponent() {
 
   return (
     <div className={styles.result}>
-      {filteredDoctors.map((doctor) => (
+      {filteredDoctors.length ? filteredDoctors.map((doctor) => (
         <div key={doctor.id} className={styles.doctorCard}>
           <div className={styles.info}>
-            <div className={styles.right_box}>
-              <span className={styles.profile}>
-                <MingcuteUser3Fill />
-              </span>
-              <div className={styles.rate}>
-                <span>
-                  <MingcuteStarFill />
-                  <b>{`${doctor.star}`}</b>
+            <div className={styles.info_container}>
+              <div className={styles.right_box}>
+                <span className={styles.profile}>
+                  <MingcuteUser3Fill />
                 </span>
-                <h6> {` (${doctor.reviewCount} نظر)`}</h6>
+                <div className={styles.rate}>
+                  <span>
+                    <MingcuteStarFill />
+                    <b>{`${doctor.star}`}</b>
+                  </span>
+                  <h6> {` (${doctor.reviewCount} نظر)`}</h6>
+                </div>
+              </div>
+              <div className={styles.left_box}>
+                <h3>{doctor.name}</h3>
+                <p>تخصص: {doctor.specialtie}</p>
+                <p>خدمات: {doctor.services.join(", ")}</p>
+                <p className={styles.service_types}>
+                  {doctor.serviceType.map((item, i) => (
+                    <span key={i}>
+                      {item === "in_person"
+                        ? "حضوری"
+                        : item === "online"
+                          ? "چت آنلاین"
+                          : "تلفنی"}
+                      {item === "in_person" ? (
+                        <MingcuteStethoscopeLine />
+                      ) : item === "online" ? (
+                        <MingcuteChat1Line />
+                      ) : (
+                        <MingcutePhoneCallLine />
+                      )}
+                    </span>
+                  ))}
+                </p>
               </div>
             </div>
-            <div className={styles.left_box}>
-              <h3>{doctor.name}</h3>
-              <p>تخصص: {doctor.specialtie}</p>
-              <p>خدمات: {doctor.services.join(", ")}</p>
-              <p className={styles.service_types}>
-                {doctor.serviceType.map((item, i) => (
-                  <span key={i}>
-                    {item === "in_person"
-                      ? "حضوری"
-                      : item === "online"
-                        ? "چت آنلاین"
-                        : "تلفنی"}
-                    {item === "in_person" ? (
-                      <MingcuteStethoscopeLine />
-                    ) : item === "online" ? (
-                      <MingcuteChat1Line />
-                    ) : (
-                      <MingcutePhoneCallLine />
-                    )}
-                  </span>
-                ))}
-              </p>
-            </div>
+              <Link href={"#"} className={styles.view_profile}>
+                <span>مشاهده پروفایل</span>
+                <MingcuteLeftFill />
+              </Link>
           </div>
           <div className={styles.details}>
             <div className={styles.item_detail}>
@@ -116,7 +128,12 @@ export default function FilterResultComponent() {
             <button>مشاهده پروفایل</button>
           </div>
         </div>
-      ))}
+      )) : 
+      <div className={styles.not_found}>
+        <Image src={NotfoundSearch} alt="جست و جوی مورد نظر یافت نشد" />
+        <h2>جست و جوی مورد نظر یافت نشد!</h2>
+      </div>
+      }
     </div>
   );
 }

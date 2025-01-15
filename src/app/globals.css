@@ -1,17 +1,20 @@
-:root {
-  --color-gray-98: hsl(0deg 0% 98%);
-  --color-gray-90: hsl(0deg 0% 90%);
-  --color-gray-80: hsl(0deg 0% 80%);
-  --color-gray-70: hsl(0deg 0% 70%);
-  --color-gray-40: hsl(0deg 0% 40%);
-  --color-gray-30: hsl(0deg 0% 30%);
-  --color-gray-20: hsl(0deg 0% 20%);
-  --color-gray-16: hsl(0deg 0% 16%);
-  --color-gray-12: hsl(0deg 0% 12%);
-  --color-gray-10: hsl(0deg 0% 10%);
+:root {  
+  --color-gray-98: hsl(0deg 0% 10%);
+  --color-gray-90: hsl(0deg 0% 12%);
+  --color-gray-80: hsl(0deg 0% 16%);
+  --color-gray-70: hsl(0deg 0% 20%);
+  --color-gray-40: hsl(0deg 0% 30%);
+  --color-gray-30: hsl(0deg 0% 40%);
+  --color-gray-20: hsl(0deg 0% 70%);
+  --color-gray-16: hsl(0deg 0% 80%);
+  --color-gray-12: hsl(0deg 0% 90%);
+  --color-gray-10: hsl(0deg 0% 98%);
 
-  --color-default-background: var(--color-gray-10);
+  --bg-header: hsla(208, 82%, 32%, 0.2);
+
+  --color-default-background: hsl(208deg 82% 98%);
   --color-default-foreground: var(--color-gray-98);
+
 
   --color-primary: hsl(208deg 82% 32%);
   --color-primary-fade: hsl(208, 76%, 97%);
@@ -34,22 +37,19 @@
 :root[data-theme="dark"] {
   --color-default-background: var(--color-gray-12);
   --color-default-foreground: var(--color-gray-98);
-}
 
-:root[data-theme="light"] {
-  --color-default-background: var(--color-gray-12);
-  --color-default-foreground: var(--color-gray-98);
+  --color-gray-98: hsl(0deg 0% 98%);
+  --color-gray-90: hsl(0deg 0% 90%);
+  --color-gray-80: hsl(0deg 0% 80%);
+  --color-gray-70: hsl(0deg 0% 70%);
+  --color-gray-40: hsl(0deg 0% 40%);
+  --color-gray-30: hsl(0deg 0% 30%);
+  --color-gray-20: hsl(0deg 0% 20%);
+  --color-gray-16: hsl(0deg 0% 16%);
+  --color-gray-12: hsl(0deg 0% 12%);
+  --color-gray-10: hsl(0deg 0% 10%);
 
-  --color-gray-98: hsl(0deg 0% 10%);
-  --color-gray-90: hsl(0deg 0% 12%);
-  --color-gray-80: hsl(0deg 0% 16%);
-  --color-gray-70: hsl(0deg 0% 20%);
-  --color-gray-40: hsl(0deg 0% 30%);
-  --color-gray-30: hsl(0deg 0% 40%);
-  --color-gray-20: hsl(0deg 0% 70%);
-  --color-gray-16: hsl(0deg 0% 80%);
-  --color-gray-12: hsl(0deg 0% 90%);
-  --color-gray-10: hsl(0deg 0% 98%);
+  --bg-header: hsla(208, 82%, 32%, 0.2);
 }
 
 ::view-transition-old(root),

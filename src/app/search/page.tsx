@@ -14,7 +14,7 @@ import SeleceOptionComponent from "@/components/select-option/selece-option.comp
 import specialties from "@/mock/specialties.json";
 import services from "@/mock/services.json";
 
-import FilterDadgesComponent from "./components/filter-badges/filter-badges.component";
+import FilterBadgesComponent from "./components/filter-badges/filter-badges.component";
 
 export default function page(): ReactElement {
   return (
@@ -29,7 +29,7 @@ export default function page(): ReactElement {
             <div className={styles.type_search}>
               <TypeSearchComponent />
             </div>
-            <FilterDadgesComponent />
+            <FilterBadgesComponent />
             <div className={styles.card}>
               <SeleceOptionComponent
                 label={"تخصص و فوق تخصص"}

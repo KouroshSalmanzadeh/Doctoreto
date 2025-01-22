@@ -8,7 +8,7 @@ import { FilterContext } from "../filter/filter-provider.component";
 
 import MingcuteCloseFill from "@/icons/MingcuteCloseFill";
 
-export default function FilterDadgesComponent() {
+export default function FilterBadgesComponent() {
   const { selectedFilters, setSelectedFilters } = useContext(FilterContext);
 
   return (

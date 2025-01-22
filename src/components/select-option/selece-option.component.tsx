@@ -96,14 +96,7 @@ export default function SeleceOptionComponent({
                 </li>
               ))
             ) : (
-              <li
-                key={0}
-                style={{
-                  cursor: "default",
-                  color: "#999",
-                  textAlign: "center",
-                }}
-              >
+              <li className={styles.not_found_text} key={0}>
                 موردی یافت نشد!
               </li>
             )}

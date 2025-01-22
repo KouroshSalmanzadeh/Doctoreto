@@ -90,6 +90,11 @@
           font-weight: 700;
         }
       }
+
+      .not_found_text {
+        cursor: default;
+        text-align: center;
+      }
     }
   }
 }

@@ -16,11 +16,14 @@ import MingcuteStarFill from "@/icons/MingcuteStarFill";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 import MingcuteCashLine from "@/icons/MingcuteCashLine";
 import MingcuteCalendarTimeAddLine from "@/icons/MingcuteCalendarTimeAddLine";
+import MingcuteLeftFill from "@/icons/MingcuteLeftFill";
 
 import NotfoundSearch from "@/assets/illastrations/not-found-search.svg";
+
 import Image from "next/image";
-import MingcuteLeftFill from "@/icons/MingcuteLeftFill";
 import Link from "next/link";
+
+import ButtonComponent from "@/components/button/button.component";
 
 export default function FilterResultComponent() {
   const { selectedFilters } = useContext(FilterContext);
@@ -135,8 +138,8 @@ export default function FilterResultComponent() {
             )}
           </div>
           <div className={styles.buttons}>
-            <button>دریافت مشاوره</button>
-            <button>مشاهده پروفایل</button>
+            <ButtonComponent text="دریافت مشاوره" />
+            <ButtonComponent text="مشاهده پروفایل" />
           </div>
         </div>
       ))}

@@ -186,27 +186,6 @@
       gap: 1rem;
 
       margin-top: 1rem;
-
-      button {
-        width: 100%;
-
-        padding: 0.5rem 0.3rem;
-
-        border-radius: 12px;
-
-        background-color: var(--color-primary);
-
-        outline: none;
-        border: none;
-
-        cursor: pointer;
-
-        transition: opacity ease 0.2s;
-
-        &:hover {
-          opacity: 0.7;
-        }
-      }
     }
   }
 

@@ -17,7 +17,7 @@
     content: "";
     position: absolute;
 
-    width: calc(var(--offset-width-active-type-search) + 20px);
+    width: calc(var(--selected-type-width) + 20px);
     height: 70%;
 
     border-radius: 6px;
@@ -26,7 +26,7 @@
 
     z-index: 0;
 
-    left: calc(var(--offset-left-active-type-search) - 10px);
+    left: calc(var(--selected-type-left) - 10px);
 
     transition: all ease 0.5s;
   }

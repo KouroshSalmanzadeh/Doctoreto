@@ -25,11 +25,11 @@ export default function TypeSearchComponent() {
   const updateOffset = useCallback((element: HTMLElement | null) => {
     if (element) {
       document.documentElement.style.setProperty(
-        "--offset-left-active-type-search",
+        "--selected-type-left",
         `${element.offsetLeft}px`,
       );
       document.documentElement.style.setProperty(
-        "--offset-width-active-type-search",
+        "--selected-type-width",
         `${element.offsetWidth}px`,
       );
     }

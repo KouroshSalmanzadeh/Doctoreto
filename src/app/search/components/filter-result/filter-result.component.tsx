@@ -26,30 +26,23 @@ import Link from "next/link";
 import ButtonComponent from "@/components/button/button.component";
 
 export default function FilterResultComponent() {
-  const { selectedFilters } = useContext(FilterContext);
+  const { filters } = useContext(FilterContext);
 
   const [filteredDoctors, setFilteredDoctors] = useState(doctors);
 
   useEffect(() => {
     const filtered = doctors.filter((doctor) => {
       const matchesServiceType =
-        selectedFilters.plural === "" ||
-        doctor.plural.includes(selectedFilters.plural);
+        filters.plural === "" || doctor.plural.includes(filters.plural);
       const matchesExpertise =
-        selectedFilters.expertise === "" ||
-        doctor.expertise === selectedFilters.expertise;
+        filters.expertise === "" || doctor.expertise === filters.expertise;
       const matchesService =
-        selectedFilters.service === "" ||
-        doctor.services.includes(selectedFilters.service);
+        filters.service === "" || doctor.services.includes(filters.service);
 
       return matchesServiceType && matchesExpertise && matchesService;
     });
     setFilteredDoctors(filtered);
-  }, [
-    selectedFilters.service,
-    selectedFilters.plural,
-    selectedFilters.expertise,
-  ]);
+  }, [filters.service, filters.plural, filters.expertise]);
 
   if (filteredDoctors.length === 0) {
     return (

@@ -4,35 +4,35 @@ import React, { Dispatch, PropsWithChildren, SetStateAction } from "react";
 
 import { createContext, useState } from "react";
 
-type SelectedFilters = {
+type filters = {
   service: string;
   expertise: string;
   plural: string;
 };
 
 type FilterContextType = {
-  selectedFilters: SelectedFilters;
-  setSelectedFilters: Dispatch<SetStateAction<SelectedFilters>>;
+  filters: filters;
+  Setfilters: Dispatch<SetStateAction<filters>>;
 };
 
 export const FilterContext = createContext<FilterContextType>({
-  selectedFilters: {
+  filters: {
     service: "",
     expertise: "",
     plural: "inPerson",
   },
-  setSelectedFilters: () => {},
+  Setfilters: () => {},
 });
 
 export default function FilterComponent({ children }: PropsWithChildren) {
-  const [selectedFilters, setSelectedFilters] = useState<SelectedFilters>({
+  const [filters, Setfilters] = useState<filters>({
     service: "",
     expertise: "",
     plural: "inPerson",
   });
 
   return (
-    <FilterContext.Provider value={{ selectedFilters, setSelectedFilters }}>
+    <FilterContext.Provider value={{ filters, Setfilters }}>
       {children}
     </FilterContext.Provider>
   );

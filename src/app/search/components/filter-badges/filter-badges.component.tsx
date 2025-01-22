@@ -9,29 +9,25 @@ import { FilterContext } from "../filter/filter-provider.component";
 import MingcuteCloseFill from "@/icons/MingcuteCloseFill";
 
 export default function FilterBadgesComponent() {
-  const { selectedFilters, setSelectedFilters } = useContext(FilterContext);
+  const { filters, Setfilters } = useContext(FilterContext);
 
   return (
     <div className={styles.filterbadges}>
-      {selectedFilters.service.length ? (
+      {filters.service.length ? (
         <span
-          onClick={() =>
-            setSelectedFilters((prev) => ({ ...prev, service: "" }))
-          }
+          onClick={() => Setfilters((prev) => ({ ...prev, service: "" }))}
           className={styles.badge}
         >
-          {selectedFilters.service}
+          {filters.service}
           <MingcuteCloseFill />
         </span>
       ) : null}
-      {selectedFilters.expertise.length ? (
+      {filters.expertise.length ? (
         <span
-          onClick={() =>
-            setSelectedFilters((prev) => ({ ...prev, expertise: "" }))
-          }
+          onClick={() => Setfilters((prev) => ({ ...prev, expertise: "" }))}
           className={styles.badge}
         >
-          {selectedFilters.expertise}
+          {filters.expertise}
           <MingcuteCloseFill />
         </span>
       ) : null}

@@ -26,30 +26,30 @@ export default function SeleceOptionComponent({
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const { selectedFilters, setSelectedFilters } = useContext(FilterContext);
+  const { filters, Setfilters } = useContext(FilterContext);
 
   // ---------- clear expertises input when service input is filled ----------
   useEffect(() => {
-    if (id === "expertises" && selectedFilters.service) {
-      setSelectedFilters((prev) => ({ ...prev, expertise: "" }));
+    if (id === "expertises" && filters.service) {
+      Setfilters((prev) => ({ ...prev, expertise: "" }));
     }
-  }, [selectedFilters.service]);
+  }, [filters.service]);
 
   // ---------- clear service input when expertises input is filled ----------
   useEffect(() => {
-    if (id === "services" && selectedFilters.expertise) {
-      setSelectedFilters((prev) => ({ ...prev, service: "" }));
+    if (id === "services" && filters.expertise) {
+      Setfilters((prev) => ({ ...prev, service: "" }));
     }
-  }, [selectedFilters.expertise]);
+  }, [filters.expertise]);
 
   // ---------- clear inputs when badges are closed ----------
   useEffect(() => {
-    if (id === "expertises" && selectedFilters.expertise !== searchTerm) {
+    if (id === "expertises" && filters.expertise !== searchTerm) {
       setSearchTerm("");
-    } else if (id === "services" && selectedFilters.service !== searchTerm) {
+    } else if (id === "services" && filters.service !== searchTerm) {
       setSearchTerm("");
     }
-  }, [selectedFilters.expertise, selectedFilters.service]);
+  }, [filters.expertise, filters.service]);
 
   const filteredOptions = options.filter((option) =>
     option.value.includes(searchTerm),
@@ -59,9 +59,9 @@ export default function SeleceOptionComponent({
     setIsOpen(false);
     setSearchTerm(value);
     if (id === "expertises") {
-      setSelectedFilters((prev) => ({ ...prev, expertise: value }));
+      Setfilters((prev) => ({ ...prev, expertise: value }));
     } else if (id === "services") {
-      setSelectedFilters((prev) => ({ ...prev, service: value }));
+      Setfilters((prev) => ({ ...prev, service: value }));
     }
   };
 

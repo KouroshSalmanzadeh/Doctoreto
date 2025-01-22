@@ -8,7 +8,7 @@ export default function TypeSearchComponent() {
   const [resize, setResize] = useState<number>(0);
   const [type, setType] = useState<string>("inPerson");
 
-  const { setSelectedFilters } = useContext(FilterContext);
+  const { Setfilters } = useContext(FilterContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,10 +48,10 @@ export default function TypeSearchComponent() {
 
       updateOffset(currentItem);
 
-      setSelectedFilters((prev) => ({ ...prev, plural: currentItem.id }));
+      Setfilters((prev) => ({ ...prev, plural: currentItem.id }));
       setType(currentItem.id);
     },
-    [setSelectedFilters, updateOffset],
+    [Setfilters, updateOffset],
   );
 
   const types = useMemo(

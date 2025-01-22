@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 
 import styles from "./filter-result.module.css";
 
-import doctors from "@/data/doctors.json";
+import {doctors} from "@/mock/doctors";
 
 import { FilterContext } from "@/app/search/components/filter/filter-provider.component";
 

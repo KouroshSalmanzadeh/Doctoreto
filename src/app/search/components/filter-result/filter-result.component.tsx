@@ -75,7 +75,7 @@ export default function FilterResultComponent() {
                       <MingcuteStarFill />
                       <b>{doctor.star}</b>
                     </span>
-                    <h6> {` (${doctor.reviewCount} نظر)`}</h6>
+                    <label> {` (${doctor.reviewCount} نظر)`}</label>
                   </div>
                 </div>
                 <div className={styles.left_box}>

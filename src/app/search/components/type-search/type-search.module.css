@@ -40,8 +40,8 @@
 
     transition: all ease 0.5s;
   }
-}
 
-.type_search .active {
-  color: hsl(0deg 0% 98%);
+  & .active {
+    color: hsl(0deg 0% 98%);
+  }
 }

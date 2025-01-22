@@ -11,8 +11,8 @@ import FilterResultComponent from "./components/filter-result/filter-result.comp
 
 import SeleceOptionComponent from "@/components/select-option/selece-option.component";
 
-import specialties from "@/data/specialties.json";
-import services from "@/data/services.json";
+import specialties from "@/mock/specialties.json";
+import services from "@/mock/services.json";
 
 import FilterDadgesComponent from "./components/filter-badges/filter-badges.component";
 

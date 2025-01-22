@@ -8,7 +8,7 @@ export default function TypeSearchComponent() {
   const [resize, setResize] = useState<number>(0);
   const [type, setType] = useState<string>("inPerson");
 
-  const { Setfilters } = useContext(FilterContext);
+  const { dispatch } = useContext(FilterContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,10 +48,10 @@ export default function TypeSearchComponent() {
 
       updateOffset(currentItem);
 
-      Setfilters((prev) => ({ ...prev, plural: currentItem.id }));
+      dispatch({ type: "SET_PLURAL", payload: currentItem.id });
       setType(currentItem.id);
     },
-    [Setfilters, updateOffset],
+    [dispatch, updateOffset],
   );
 
   const types = useMemo(

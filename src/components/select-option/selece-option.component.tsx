@@ -1,7 +1,13 @@
 "use client";
 
-import { ReactElement, useContext, useEffect, useState } from "react";
-
+import React, {
+  ReactElement,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+  useMemo,
+} from "react";
 import styles from "./select-option.module.css";
 import MingcuteCloseFill from "@/icons/MingcuteCloseFill";
 import { FilterContext } from "@/app/search/components/filter/filter-provider.component";
@@ -16,93 +22,108 @@ type Props = {
   label?: string;
 } & React.ComponentPropsWithoutRef<"input">;
 
-export default function SeleceOptionComponent({
-  name,
-  id,
-  options,
-  label,
-  ...props
-}: Props): ReactElement {
-  const [isOpen, setIsOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+const SeleceOptionComponent = React.memo(
+  ({ name, id, options, label, ...props }: Props): ReactElement => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
 
-  const { filters, Setfilters } = useContext(FilterContext);
+    const { filters, dispatch } = useContext(FilterContext);
 
-  // ---------- clear expertises input when service input is filled ----------
-  useEffect(() => {
-    if (id === "expertises" && filters.service) {
-      Setfilters((prev) => ({ ...prev, expertise: "" }));
-    }
-  }, [filters.service]);
+    // Memoized filtered options
+    const filteredOptions = useMemo(() => {
+      return options.filter((option) => option.value.includes(searchTerm));
+    }, [options, searchTerm]);
 
-  // ---------- clear service input when expertises input is filled ----------
-  useEffect(() => {
-    if (id === "services" && filters.expertise) {
-      Setfilters((prev) => ({ ...prev, service: "" }));
-    }
-  }, [filters.expertise]);
+    // Handle selection of an option
+    const handleSelect = useCallback(
+      (value: string) => {
+        setIsOpen(false);
+        setSearchTerm(value);
+        if (id === "expertises") {
+          dispatch({ type: "SET_EXPERTISE", payload: value });
+        } else if (id === "services") {
+          dispatch({ type: "SET_SERVICE", payload: value });
+        }
+      },
+      [dispatch, id],
+    );
 
-  // ---------- clear inputs when badges are closed ----------
-  useEffect(() => {
-    if (id === "expertises" && filters.expertise !== searchTerm) {
+    // Handle clearing the search term
+    const handleClear = useCallback(() => {
       setSearchTerm("");
-    } else if (id === "services" && filters.service !== searchTerm) {
-      setSearchTerm("");
-    }
-  }, [filters.expertise, filters.service]);
+      if (id === "expertises") {
+        dispatch({ type: "SET_EXPERTISE", payload: "" });
+      } else if (id === "services") {
+        dispatch({ type: "SET_SERVICE", payload: "" });
+      }
+    }, [dispatch, id]);
 
-  const filteredOptions = options.filter((option) =>
-    option.value.includes(searchTerm),
-  );
+    // Clear expertises input when service input is filled
+    useEffect(() => {
+      if (id === "expertises" && filters.service) {
+        dispatch({ type: "SET_EXPERTISE", payload: "" });
+      }
+    }, [filters.service, dispatch, id]);
 
-  const handleSelect = (value: string) => {
-    setIsOpen(false);
-    setSearchTerm(value);
-    if (id === "expertises") {
-      Setfilters((prev) => ({ ...prev, expertise: value }));
-    } else if (id === "services") {
-      Setfilters((prev) => ({ ...prev, service: value }));
-    }
-  };
+    // Clear service input when expertises input is filled
+    useEffect(() => {
+      if (id === "services" && filters.expertise) {
+        dispatch({ type: "SET_SERVICE", payload: "" });
+      }
+    }, [filters.expertise, dispatch, id]);
 
-  return (
-    <div className={styles.container}>
-      <label htmlFor={id}>{label}</label>
-      <input
-        onFocus={() => setIsOpen(true)}
-        onBlur={() => setIsOpen(false)}
-        autoComplete="off"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        type="text"
-        className={styles.select}
-        name={name}
-        id={id}
-        {...props}
-      />
-      {searchTerm && <MingcuteCloseFill onClick={() => handleSelect("")} />}
-      {isOpen && (
-        <div className={styles["container-list"]}>
-          <ul className={styles.list + " scroll"}>
-            {filteredOptions.length > 0 ? (
-              filteredOptions.map((item) => (
-                <li
-                  onMouseDown={() => handleSelect(item.value)}
-                  className={styles.item}
-                  key={item.id}
-                  value={item.value}
-                >
-                  {item.value}
+    // Clear search term when filters change
+    useEffect(() => {
+      if (id === "expertises" && filters.expertise !== searchTerm) {
+        setSearchTerm("");
+      } else if (id === "services" && filters.service !== searchTerm) {
+        setSearchTerm("");
+      }
+    }, [filters.expertise, filters.service, searchTerm, id]);
+
+    return (
+      <div className={styles.container}>
+        <label htmlFor={id}>{label}</label>
+        <input
+          onFocus={() => setIsOpen(true)}
+          onBlur={() => setIsOpen(false)}
+          autoComplete="off"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          type="text"
+          className={styles.select}
+          name={name}
+          id={id}
+          {...props}
+        />
+        {searchTerm && <MingcuteCloseFill onClick={handleClear} />}
+        {isOpen && (
+          <div className={styles["container-list"]}>
+            <ul className={styles.list + " scroll"}>
+              {filteredOptions.length > 0 ? (
+                filteredOptions.map((item) => (
+                  <li
+                    onMouseDown={() => handleSelect(item.value)}
+                    className={styles.item}
+                    key={item.id}
+                    value={item.value}
+                  >
+                    {item.value}
+                  </li>
+                ))
+              ) : (
+                <li className={styles.not_found_text} key={0}>
+                  موردی یافت نشد!
                 </li>
-              ))
-            ) : (
-              <li className={styles.not_found_text} key={0}>
-                موردی یافت نشد!
-              </li>
-            )}
-          </ul>
-        </div>
-      )}
-    </div>
-  );
-}
+              )}
+            </ul>
+          </div>
+        )}
+      </div>
+    );
+  },
+);
+
+SeleceOptionComponent.displayName = "SeleceOptionComponent"; // برای رفع ارور ESLint
+
+export default SeleceOptionComponent;

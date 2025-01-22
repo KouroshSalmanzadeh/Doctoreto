@@ -25,9 +25,12 @@ export default function FilterResultComponent() {
 
   const filteredDoctors = useMemo(() => {
     return doctors.filter((doctor) => {
-      const matchesServiceType = filters.plural === "" || doctor.plural.includes(filters.plural);
-      const matchesExpertise = filters.expertise === "" || doctor.expertise === filters.expertise;
-      const matchesService = filters.service === "" || doctor.services.includes(filters.service);
+      const matchesServiceType =
+        filters.plural === "" || doctor.plural.includes(filters.plural);
+      const matchesExpertise =
+        filters.expertise === "" || doctor.expertise === filters.expertise;
+      const matchesService =
+        filters.service === "" || doctor.services.includes(filters.service);
 
       return matchesServiceType && matchesExpertise && matchesService;
     });

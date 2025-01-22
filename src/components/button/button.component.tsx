@@ -8,13 +8,12 @@ type Props = ComponentProps<"button"> & {
   className?: string;
 };
 
-export default function ButtonComponent({
-  className,
-  text,
-  ...props
-}: Props) {
+export default function ButtonComponent({ className, text, ...props }: Props) {
   return (
-    <button className={`${className ? className : ""} ${styles.button}`} {...props}>
+    <button
+      className={`${className ? className : ""} ${styles.button}`}
+      {...props}
+    >
       {text}
     </button>
   );

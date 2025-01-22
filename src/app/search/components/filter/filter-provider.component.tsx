@@ -1,38 +1,52 @@
 "use client";
 
-import React, { Dispatch, PropsWithChildren, SetStateAction } from "react";
+import React, { createContext, useReducer } from "react";
 
-import { createContext, useState } from "react";
-
-type filters = {
+type Filters = {
   service: string;
   expertise: string;
   plural: string;
 };
 
+type Action =
+  | { type: "SET_SERVICE"; payload: string }
+  | { type: "SET_EXPERTISE"; payload: string }
+  | { type: "SET_PLURAL"; payload: string };
+
 type FilterContextType = {
-  filters: filters;
-  Setfilters: Dispatch<SetStateAction<filters>>;
+  filters: Filters;
+  dispatch: React.Dispatch<Action>;
+};
+
+const initialState: Filters = {
+  service: "",
+  expertise: "",
+  plural: "inPerson",
 };
 
 export const FilterContext = createContext<FilterContextType>({
-  filters: {
-    service: "",
-    expertise: "",
-    plural: "inPerson",
-  },
-  Setfilters: () => {},
+  filters: initialState,
+  dispatch: () => {},
 });
 
-export default function FilterComponent({ children }: PropsWithChildren) {
-  const [filters, Setfilters] = useState<filters>({
-    service: "",
-    expertise: "",
-    plural: "inPerson",
-  });
+const filtersReducer = (state: Filters, action: Action): Filters => {
+  switch (action.type) {
+    case "SET_SERVICE":
+      return { ...state, service: action.payload };
+    case "SET_EXPERTISE":
+      return { ...state, expertise: action.payload };
+    case "SET_PLURAL":
+      return { ...state, plural: action.payload };
+    default:
+      return state;
+  }
+};
+
+export default function FilterComponent({ children }: React.PropsWithChildren) {
+  const [filters, dispatch] = useReducer(filtersReducer, initialState);
 
   return (
-    <FilterContext.Provider value={{ filters, Setfilters }}>
+    <FilterContext.Provider value={{ filters, dispatch }}>
       {children}
     </FilterContext.Provider>
   );

@@ -1,21 +1,18 @@
 "use client";
 
 import { useContext } from "react";
-
 import styles from "./filter-badges.module.css";
-
 import { FilterContext } from "../filter/filter-provider.component";
-
 import MingcuteCloseFill from "@/icons/MingcuteCloseFill";
 
 export default function FilterBadgesComponent() {
-  const { filters, Setfilters } = useContext(FilterContext);
+  const { filters, dispatch } = useContext(FilterContext);
 
   return (
     <div className={styles.filterbadges}>
       {filters.service.length ? (
         <span
-          onClick={() => Setfilters((prev) => ({ ...prev, service: "" }))}
+          onClick={() => dispatch({ type: "SET_SERVICE", payload: "" })}
           className={styles.badge}
         >
           {filters.service}
@@ -24,7 +21,7 @@ export default function FilterBadgesComponent() {
       ) : null}
       {filters.expertise.length ? (
         <span
-          onClick={() => Setfilters((prev) => ({ ...prev, expertise: "" }))}
+          onClick={() => dispatch({ type: "SET_EXPERTISE", payload: "" })}
           className={styles.badge}
         >
           {filters.expertise}

@@ -4,7 +4,7 @@ export type DoctorModel = {
   image?: string;
   expertise: string;
   services: string[];
-  serviceType: string[];
+  plural : string[];
   star: number;
   reviewCount: number;
   price?: string;

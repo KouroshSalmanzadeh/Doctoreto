@@ -30,8 +30,8 @@ export default function FilterResultComponent() {
   useEffect(() => {
     const filtered = doctors.filter((doctor) => {
       const matchesServiceType =
-        selectedFilters.serviceType === "" ||
-        doctor.serviceType.includes(selectedFilters.serviceType);
+        selectedFilters.plural === "" ||
+        doctor.plural.includes(selectedFilters.plural);
       const matchesExpertise =
         selectedFilters.expertise === "" ||
         doctor.expertise === selectedFilters.expertise;
@@ -44,7 +44,7 @@ export default function FilterResultComponent() {
     setFilteredDoctors(filtered);
   }, [
     selectedFilters.service,
-    selectedFilters.serviceType,
+    selectedFilters.plural,
     selectedFilters.expertise,
   ]);
 
@@ -82,7 +82,7 @@ export default function FilterResultComponent() {
                 <p>تخصص: {doctor.expertise}</p>
                 <p>خدمات: {doctor.services.join(", ")}</p>
                 <p className={styles.service_types}>
-                  {doctor.serviceType.map((item, i) => (
+                  {doctor.plural.map((item, i) => (
                     <span key={i}>
                       {item === "inPerson"
                         ? "حضوری"

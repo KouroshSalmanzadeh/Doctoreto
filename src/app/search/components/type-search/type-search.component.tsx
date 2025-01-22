@@ -60,7 +60,7 @@ export default function TypeSearchComponent() {
     offsetLeft(currentItem?.offsetLeft);
     offsetWidth(currentItem?.offsetWidth);
 
-    setSelectedFilters((prev) => ({ ...prev, serviceType: currentItem.id }));
+    setSelectedFilters((prev) => ({ ...prev, plural: currentItem.id }));
   };
 
   return (

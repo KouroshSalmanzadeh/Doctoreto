@@ -7,7 +7,7 @@ import { createContext, useState } from "react";
 type SelectedFilters = {
   service: string;
   expertise: string;
-  serviceType: string;
+  plural: string;
 };
 
 type FilterContextType = {
@@ -19,7 +19,7 @@ export const FilterContext = createContext<FilterContextType>({
   selectedFilters: {
     service: "",
     expertise: "",
-    serviceType: "inPerson",
+    plural: "inPerson",
   },
   setSelectedFilters: () => {},
 });
@@ -28,7 +28,7 @@ export default function FilterComponent({ children }: PropsWithChildren) {
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilters>({
     service: "",
     expertise: "",
-    serviceType: "inPerson",
+    plural: "inPerson",
   });
 
   return (

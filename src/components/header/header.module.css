@@ -50,16 +50,16 @@
       > li {
         a {
           display: inline-block;
-          
+
           font-size: var(--fz-450);
-          
+
           transition: all 0.2s ease;
-          
+
           &:hover {
             scale: 1.2;
 
             font-weight: 700;
-            
+
             transition: all 0.2s ease;
           }
 

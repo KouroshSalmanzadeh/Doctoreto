@@ -1,4 +1,4 @@
-:root {  
+:root {
   --color-gray-98: hsl(0deg 0% 10%);
   --color-gray-90: hsl(0deg 0% 12%);
   --color-gray-80: hsl(0deg 0% 16%);
@@ -14,7 +14,6 @@
 
   --color-default-background: hsl(208deg 82% 98%);
   --color-default-foreground: var(--color-gray-98);
-
 
   --color-primary: hsl(208deg 82% 32%);
   --color-primary-fade: hsl(208, 76%, 97%);

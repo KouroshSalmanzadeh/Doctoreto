@@ -1,4 +1,4 @@
-import { DoctorModel } from './../models/doctors.model';
+import { DoctorModel } from "./../models/doctors.model";
 
 export const doctors: DoctorModel[] = [
   {
@@ -12,7 +12,7 @@ export const doctors: DoctorModel[] = [
     price: "200,000",
     gender: "male",
     lastFreeTime: "فردا",
-    address: "مشهد - احمد آباد - پاستور 18"
+    address: "مشهد - احمد آباد - پاستور 18",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const doctors: DoctorModel[] = [
     price: "200,000",
     gender: "female",
     lastFreeTime: "دو روز دیگر",
-    address: "تهران - تجریش - خیابان شهید فلاحی"
+    address: "تهران - تجریش - خیابان شهید فلاحی",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 89,
     gender: "male",
     lastFreeTime: "فردا",
-    address: "اصفهان - خیابان چهارباغ - کوچه بهار"
+    address: "اصفهان - خیابان چهارباغ - کوچه بهار",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 55,
     price: "200,000",
     gender: "female",
-    address: "شیراز - خیابان زند - کوچه گلستان"
+    address: "شیراز - خیابان زند - کوچه گلستان",
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 98,
     gender: "male",
     lastFreeTime: "دو روز دیگر",
-    address: "تبریز - خیابان امام - کوچه سلامت"
+    address: "تبریز - خیابان امام - کوچه سلامت",
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 34,
     price: "200,000",
     gender: "female",
-    address: "کرج - خیابان بهار - کوچه نسترن"
+    address: "کرج - خیابان بهار - کوچه نسترن",
   },
   {
     id: 7,
@@ -85,7 +85,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 76,
     gender: "male",
     lastFreeTime: "فردا",
-    address: "قم - خیابان معلم - کوچه دانش"
+    address: "قم - خیابان معلم - کوچه دانش",
   },
   {
     id: 8,
@@ -97,7 +97,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 61,
     price: "200,000",
     gender: "female",
-    address: "رشت - خیابان مطهری - کوچه سبز"
+    address: "رشت - خیابان مطهری - کوچه سبز",
   },
   {
     id: 9,
@@ -109,7 +109,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 49,
     gender: "male",
     lastFreeTime: "دو روز دیگر",
-    address: "اهواز - خیابان نفت - کوچه نارنج"
+    address: "اهواز - خیابان نفت - کوچه نارنج",
   },
   {
     id: 10,
@@ -121,7 +121,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 92,
     price: "200,000",
     gender: "female",
-    address: "کرمان - خیابان شریعتی - کوچه گل"
+    address: "کرمان - خیابان شریعتی - کوچه گل",
   },
   {
     id: 11,
@@ -133,7 +133,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 58,
     gender: "male",
     lastFreeTime: "فردا",
-    address: "یزد - خیابان امام - کوچه کویر"
+    address: "یزد - خیابان امام - کوچه کویر",
   },
   {
     id: 12,
@@ -145,7 +145,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 73,
     price: "200,000",
     gender: "female",
-    address: "ارومیه - خیابان دانش - کوچه آفتاب"
+    address: "ارومیه - خیابان دانش - کوچه آفتاب",
   },
   {
     id: 13,
@@ -156,7 +156,7 @@ export const doctors: DoctorModel[] = [
     star: 3.7,
     reviewCount: 41,
     gender: "male",
-    address: "زاهدان - خیابان آزادی - کوچه صدف"
+    address: "زاهدان - خیابان آزادی - کوچه صدف",
   },
   {
     id: 14,
@@ -169,7 +169,7 @@ export const doctors: DoctorModel[] = [
     price: "200,000",
     gender: "female",
     lastFreeTime: "دو روز دیگر",
-    address: "بندرعباس - خیابان ساحلی - کوچه دریا"
+    address: "بندرعباس - خیابان ساحلی - کوچه دریا",
   },
   {
     id: 15,
@@ -180,7 +180,7 @@ export const doctors: DoctorModel[] = [
     star: 3.6,
     reviewCount: 37,
     gender: "male",
-    address: "همدان - خیابان بوعلی - کوچه حکیم"
+    address: "همدان - خیابان بوعلی - کوچه حکیم",
   },
   {
     id: 16,
@@ -193,7 +193,7 @@ export const doctors: DoctorModel[] = [
     price: "200,000",
     gender: "female",
     lastFreeTime: "فردا",
-    address: "ساری - خیابان انقلاب - کوچه باران"
+    address: "ساری - خیابان انقلاب - کوچه باران",
   },
   {
     id: 17,
@@ -204,7 +204,7 @@ export const doctors: DoctorModel[] = [
     star: 4.1,
     reviewCount: 53,
     gender: "male",
-    address: "گرگان - خیابان شالیکوبی - کوچه برنج"
+    address: "گرگان - خیابان شالیکوبی - کوچه برنج",
   },
   {
     id: 18,
@@ -216,7 +216,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 46,
     price: "200,000",
     gender: "female",
-    address: "قزوین - خیابان فردوسی - کوچه فردوسی"
+    address: "قزوین - خیابان فردوسی - کوچه فردوسی",
   },
   {
     id: 19,
@@ -228,7 +228,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 64,
     gender: "male",
     lastFreeTime: "دو روز دیگر",
-    address: "اراک - خیابان امام - کوچه سلامت"
+    address: "اراک - خیابان امام - کوچه سلامت",
   },
   {
     id: 20,
@@ -240,7 +240,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 79,
     price: "200,000",
     gender: "female",
-    address: "کرمانشاه - خیابان شهید بهشتی - کوچه بهشت"
+    address: "کرمانشاه - خیابان شهید بهشتی - کوچه بهشت",
   },
   {
     id: 21,
@@ -251,7 +251,7 @@ export const doctors: DoctorModel[] = [
     star: 3.9,
     reviewCount: 51,
     gender: "male",
-    address: "شیراز - خیابان زند - کوچه گلستان"
+    address: "شیراز - خیابان زند - کوچه گلستان",
   },
   {
     id: 22,
@@ -264,7 +264,7 @@ export const doctors: DoctorModel[] = [
     price: "200,000",
     gender: "female",
     lastFreeTime: "فردا",
-    address: "تبریز - خیابان امام - کوچه سلامت"
+    address: "تبریز - خیابان امام - کوچه سلامت",
   },
   {
     id: 23,
@@ -275,7 +275,7 @@ export const doctors: DoctorModel[] = [
     star: 4.0,
     reviewCount: 57,
     gender: "male",
-    address: "کرج - خیابان بهار - کوچه نسترن"
+    address: "کرج - خیابان بهار - کوچه نسترن",
   },
   {
     id: 24,
@@ -287,7 +287,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 43,
     price: "200,000",
     gender: "male",
-    address: "قم - خیابان معلم - کوچه دانش"
+    address: "قم - خیابان معلم - کوچه دانش",
   },
   {
     id: 25,
@@ -299,7 +299,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 81,
     gender: "female",
     lastFreeTime: "دو روز دیگر",
-    address: "رشت - خیابان مطهری - کوچه سبز"
+    address: "رشت - خیابان مطهری - کوچه سبز",
   },
   {
     id: 26,
@@ -310,7 +310,7 @@ export const doctors: DoctorModel[] = [
     star: 3.8,
     reviewCount: 47,
     gender: "male",
-    address: "اهواز - خیابان نفت - کوچه نارنج"
+    address: "اهواز - خیابان نفت - کوچه نارنج",
   },
   {
     id: 27,
@@ -322,7 +322,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 62,
     price: "200,000",
     gender: "female",
-    address: "کرمان - خیابان شریعتی - کوچه گل"
+    address: "کرمان - خیابان شریعتی - کوچه گل",
   },
   {
     id: 28,
@@ -334,7 +334,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 74,
     gender: "male",
     lastFreeTime: "فردا",
-    address: "یزد - خیابان امام - کوچه کویر"
+    address: "یزد - خیابان امام - کوچه کویر",
   },
   {
     id: 29,
@@ -346,7 +346,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 39,
     price: "200,000",
     gender: "female",
-    address: "ارومیه - خیابان دانش - کوچه آفتاب"
+    address: "ارومیه - خیابان دانش - کوچه آفتاب",
   },
   {
     id: 30,
@@ -357,7 +357,7 @@ export const doctors: DoctorModel[] = [
     star: 4.7,
     reviewCount: 85,
     gender: "male",
-    address: "زاهدان - خیابان آزادی - کوچه صدف"
+    address: "زاهدان - خیابان آزادی - کوچه صدف",
   },
   {
     id: 31,
@@ -368,7 +368,7 @@ export const doctors: DoctorModel[] = [
     star: 4.2,
     reviewCount: 66,
     gender: "female",
-    address: "بندرعباس - خیابان ساحلی - کوچه دریا"
+    address: "بندرعباس - خیابان ساحلی - کوچه دریا",
   },
   {
     id: 32,
@@ -379,7 +379,7 @@ export const doctors: DoctorModel[] = [
     star: 3.9,
     reviewCount: 52,
     gender: "male",
-    address: "همدان - خیابان بوعلی - کوچه حکیم"
+    address: "همدان - خیابان بوعلی - کوچه حکیم",
   },
   {
     id: 33,
@@ -390,7 +390,7 @@ export const doctors: DoctorModel[] = [
     star: 4.0,
     reviewCount: 59,
     gender: "female",
-    address: "ساری - خیابان انقلاب - کوچه باران"
+    address: "ساری - خیابان انقلاب - کوچه باران",
   },
   {
     id: 34,
@@ -401,7 +401,7 @@ export const doctors: DoctorModel[] = [
     star: 4.3,
     reviewCount: 71,
     gender: "male",
-    address: "گرگان - خیابان شالیکوبی - کوچه برنج"
+    address: "گرگان - خیابان شالیکوبی - کوچه برنج",
   },
   {
     id: 35,
@@ -412,7 +412,7 @@ export const doctors: DoctorModel[] = [
     star: 4.6,
     reviewCount: 83,
     gender: "female",
-    address: "قزوین - خیابان فردوسی - کوچه فردوسی"
+    address: "قزوین - خیابان فردوسی - کوچه فردوسی",
   },
   {
     id: 36,
@@ -423,7 +423,7 @@ export const doctors: DoctorModel[] = [
     star: 3.5,
     reviewCount: 36,
     gender: "male",
-    address: "اراک - خیابان امام - کوچه سلامت"
+    address: "اراک - خیابان امام - کوچه سلامت",
   },
   {
     id: 37,
@@ -434,7 +434,7 @@ export const doctors: DoctorModel[] = [
     star: 4.1,
     reviewCount: 63,
     gender: "female",
-    address: "کرمانشاه - خیابان شهید بهشتی - کوچه بهشت"
+    address: "کرمانشاه - خیابان شهید بهشتی - کوچه بهشت",
   },
   {
     id: 38,
@@ -445,7 +445,7 @@ export const doctors: DoctorModel[] = [
     star: 4.4,
     reviewCount: 77,
     gender: "male",
-    address: "خرم‌آباد - خیابان فلکه دانشگاه - کوچه دانشجو"
+    address: "خرم‌آباد - خیابان فلکه دانشگاه - کوچه دانشجو",
   },
   {
     id: 39,
@@ -456,7 +456,7 @@ export const doctors: DoctorModel[] = [
     star: 3.8,
     reviewCount: 48,
     gender: "female",
-    address: "سنندج - خیابان فردوسی - کوچه بهار"
+    address: "سنندج - خیابان فردوسی - کوچه بهار",
   },
   {
     id: 40,
@@ -467,6 +467,6 @@ export const doctors: DoctorModel[] = [
     star: 4.5,
     reviewCount: 84,
     gender: "male",
-    address: "یزد - خیابان سعدی - کوچه سرو"
-  }
+    address: "یزد - خیابان سعدی - کوچه سرو",
+  },
 ];

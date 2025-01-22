@@ -48,9 +48,20 @@ export default function FilterResultComponent() {
     selectedFilters.expertise,
   ]);
 
+  if (filteredDoctors.length === 0) {
+    return (
+      <div className={styles.result}>
+        <div className={styles.not_found}>
+          <Image src={NotfoundSearch} alt="جست و جوی مورد نظر یافت نشد" />
+          <h2>جست و جوی مورد نظر یافت نشد!</h2>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className={styles.result}>
-      {filteredDoctors.length ? (
+      {
         filteredDoctors.map((doctor) => (
           <div key={doctor.id} className={styles.doctorCard}>
             <div className={styles.info}>
@@ -130,12 +141,7 @@ export default function FilterResultComponent() {
             </div>
           </div>
         ))
-      ) : (
-        <div className={styles.not_found}>
-          <Image src={NotfoundSearch} alt="جست و جوی مورد نظر یافت نشد" />
-          <h2>جست و جوی مورد نظر یافت نشد!</h2>
-        </div>
-      )}
+      }
     </div>
   );
 }

@@ -73,7 +73,7 @@ export default function FilterResultComponent() {
                   <div className={styles.rate}>
                     <span>
                       <MingcuteStarFill />
-                      <b>{`${doctor.star}`}</b>
+                      <b>{doctor.star}</b>
                     </span>
                     <h6> {` (${doctor.reviewCount} نظر)`}</h6>
                   </div>

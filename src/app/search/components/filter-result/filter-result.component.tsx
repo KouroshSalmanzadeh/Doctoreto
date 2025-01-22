@@ -32,20 +32,20 @@ export default function FilterResultComponent() {
       const matchesServiceType =
         selectedFilters.serviceType === "" ||
         doctor.serviceType.includes(selectedFilters.serviceType);
-      const matchesSpecialtie =
-        selectedFilters.specialtie === "" ||
-        doctor.specialtie === selectedFilters.specialtie;
+      const matchesExpertise =
+        selectedFilters.expertise === "" ||
+        doctor.expertise === selectedFilters.expertise;
       const matchesService =
         selectedFilters.service === "" ||
         doctor.services.includes(selectedFilters.service);
 
-      return matchesServiceType && matchesSpecialtie && matchesService;
+      return matchesServiceType && matchesExpertise && matchesService;
     });
     setFilteredDoctors(filtered);
   }, [
     selectedFilters.service,
     selectedFilters.serviceType,
-    selectedFilters.specialtie,
+    selectedFilters.expertise,
   ]);
 
   return (
@@ -69,7 +69,7 @@ export default function FilterResultComponent() {
                 </div>
                 <div className={styles.left_box}>
                   <h3>{doctor.name}</h3>
-                  <p>تخصص: {doctor.specialtie}</p>
+                  <p>تخصص: {doctor.expertise}</p>
                   <p>خدمات: {doctor.services.join(", ")}</p>
                   <p className={styles.service_types}>
                     {doctor.serviceType.map((item, i) => (

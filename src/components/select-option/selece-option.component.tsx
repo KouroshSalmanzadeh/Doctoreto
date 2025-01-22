@@ -28,28 +28,28 @@ export default function SeleceOptionComponent({
 
   const { selectedFilters, setSelectedFilters } = useContext(FilterContext);
 
-  // ---------- clear specialties input when service input is filled ----------
+  // ---------- clear expertises input when service input is filled ----------
   useEffect(() => {
-    if (id === "specialties" && selectedFilters.service) {
-      setSelectedFilters((prev) => ({ ...prev, specialtie: "" }));
+    if (id === "expertises" && selectedFilters.service) {
+      setSelectedFilters((prev) => ({ ...prev, expertise: "" }));
     }
   }, [selectedFilters.service]);
 
-  // ---------- clear service input when specialties input is filled ----------
+  // ---------- clear service input when expertises input is filled ----------
   useEffect(() => {
-    if (id === "services" && selectedFilters.specialtie) {
+    if (id === "services" && selectedFilters.expertise) {
       setSelectedFilters((prev) => ({ ...prev, service: "" }));
     }
-  }, [selectedFilters.specialtie]);
+  }, [selectedFilters.expertise]);
 
   // ---------- clear inputs when badges are closed ----------
   useEffect(() => {
-    if (id === "specialties" && selectedFilters.specialtie !== searchTerm) {
+    if (id === "expertises" && selectedFilters.expertise !== searchTerm) {
       setSearchTerm("");
     } else if (id === "services" && selectedFilters.service !== searchTerm) {
       setSearchTerm("");
     }
-  }, [selectedFilters.specialtie, selectedFilters.service]);
+  }, [selectedFilters.expertise, selectedFilters.service]);
 
   const filteredOptions = options.filter((option) =>
     option.value.includes(searchTerm),
@@ -58,8 +58,8 @@ export default function SeleceOptionComponent({
   const handleSelect = (value: string) => {
     setIsOpen(false);
     setSearchTerm(value);
-    if (id === "specialties") {
-      setSelectedFilters((prev) => ({ ...prev, specialtie: value }));
+    if (id === "expertises") {
+      setSelectedFilters((prev) => ({ ...prev, expertise: value }));
     } else if (id === "services") {
       setSelectedFilters((prev) => ({ ...prev, service: value }));
     }

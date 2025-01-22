@@ -24,14 +24,14 @@ export default function FilterDadgesComponent() {
           <MingcuteCloseFill />
         </span>
       ) : null}
-      {selectedFilters.specialtie.length ? (
+      {selectedFilters.expertise.length ? (
         <span
           onClick={() =>
-            setSelectedFilters((prev) => ({ ...prev, specialtie: "" }))
+            setSelectedFilters((prev) => ({ ...prev, expertise: "" }))
           }
           className={styles.badge}
         >
-          {selectedFilters.specialtie}
+          {selectedFilters.expertise}
           <MingcuteCloseFill />
         </span>
       ) : null}

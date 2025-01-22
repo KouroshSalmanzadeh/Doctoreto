@@ -34,8 +34,8 @@ export default function page(): ReactElement {
               <SeleceOptionComponent
                 label={"تخصص و فوق تخصص"}
                 placeholder={"مثلا فیزیوتراپی"}
-                id="specialties"
-                name="specialties"
+                id="expertises"
+                name="expertises"
                 options={specialties}
               />
             </div>

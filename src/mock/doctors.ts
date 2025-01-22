@@ -4,7 +4,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 1,
     name: "دکتر علی محمدی",
-    specialtie: "پزشکی داخلی",
+    expertise: "پزشکی داخلی",
     services: ["پلاسما تراپی", "درمان سنگ کلیه"],
     serviceType: ["in_person", "online"],
     star: 4.3,
@@ -17,7 +17,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 2,
     name: "دکتر فاطمه احمدی",
-    specialtie: "پزشکی اطفال",
+    expertise: "پزشکی اطفال",
     services: ["واکسیناسیون", "درمان عفونت ادراری در کودکان"],
     serviceType: ["online", "tell"],
     star: 3.8,
@@ -30,7 +30,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 3,
     name: "دکتر محسن رضایی",
-    specialtie: "جراحی عمومی",
+    expertise: "جراحی عمومی",
     services: ["جراحی فتق", "جراحی هیدروسل بیضه"],
     serviceType: ["in_person", "online"],
     star: 4.7,
@@ -42,7 +42,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 4,
     name: "دکتر زهرا حسینی",
-    specialtie: "زنان و زایمان",
+    expertise: "زنان و زایمان",
     services: ["درمان ناباروری", "جراحی زیبایی زنان"],
     serviceType: ["tell", "in_person"],
     star: 4.1,
@@ -54,7 +54,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 5,
     name: "دکتر سعید کریمی",
-    specialtie: "پزشکی قلب و عروق",
+    expertise: "پزشکی قلب و عروق",
     services: ["الکتروفیزیولوژی قلب", "اینترونشنال کاردیولوژی"],
     serviceType: ["in_person", "online", "tell"],
     star: 4.9,
@@ -66,7 +66,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 6,
     name: "دکتر مریم قاسمی",
-    specialtie: "پزشکی پوست",
+    expertise: "پزشکی پوست",
     services: ["لیزر درمانی", "درمان زگیل تناسلی"],
     serviceType: ["online", "tell"],
     star: 3.5,
@@ -78,7 +78,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 7,
     name: "دکتر رضا موسوی",
-    specialtie: "پزشکی مغز و اعصاب",
+    expertise: "پزشکی مغز و اعصاب",
     services: ["درمان ام‌اس", "صرع"],
     serviceType: ["tell", "in_person"],
     star: 4.6,
@@ -90,7 +90,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 8,
     name: "دکتر نسرین محمدی",
-    specialtie: "پزشکی گوارش",
+    expertise: "پزشکی گوارش",
     services: ["آندوسکوپی پیشرفته", "درمان بیماری‌های کبد"],
     serviceType: ["in_person", "online"],
     star: 4.2,
@@ -102,7 +102,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 9,
     name: "دکتر امیر حسینی",
-    specialtie: "پزشکی کلیه",
+    expertise: "پزشکی کلیه",
     services: ["دیالیز", "پیوند کلیه"],
     serviceType: ["online", "tell"],
     star: 3.9,
@@ -114,7 +114,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 10,
     name: "دکتر لیلا رضایی",
-    specialtie: "پزشکی خون و سرطان",
+    expertise: "پزشکی خون و سرطان",
     services: ["درمان سرطان‌های خاص", "پیوند مغز استخوان"],
     serviceType: ["tell", "in_person"],
     star: 4.8,
@@ -126,7 +126,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 11,
     name: "دکتر حسین احمدی",
-    specialtie: "پزشکی روماتولوژی",
+    expertise: "پزشکی روماتولوژی",
     services: ["درمان روماتیسم", "درمان آرتروز"],
     serviceType: ["in_person", "online"],
     star: 4.0,
@@ -138,7 +138,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 12,
     name: "دکتر زهرا کریمی",
-    specialtie: "پزشکی طب فیزیکی و توان‌بخشی",
+    expertise: "پزشکی طب فیزیکی و توان‌بخشی",
     services: ["فیزیوتراپی", "درمان دردهای مزمن"],
     serviceType: ["online", "tell"],
     star: 4.4,
@@ -150,7 +150,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 13,
     name: "دکتر محمود رضایی",
-    specialtie: "پزشکی هسته‌ای",
+    expertise: "پزشکی هسته‌ای",
     services: ["درمان سرطان با رادیوتراپی", "اسکن هسته‌ای"],
     serviceType: ["tell", "in_person"],
     star: 3.7,
@@ -161,7 +161,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 14,
     name: "دکتر سارا محمدی",
-    specialtie: "پزشکی قانونی",
+    expertise: "پزشکی قانونی",
     services: ["تشخیص علت مرگ", "بررسی جراحات"],
     serviceType: ["in_person", "online"],
     star: 4.5,
@@ -174,7 +174,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 15,
     name: "دکتر علی رضایی",
-    specialtie: "پزشکی ورزشی",
+    expertise: "پزشکی ورزشی",
     services: ["درمان آسیب‌های ورزشی", "بازتوانی ورزشی"],
     serviceType: ["online", "tell"],
     star: 3.6,
@@ -185,7 +185,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 16,
     name: "دکتر فاطمه حسینی",
-    specialtie: "پزشکی چشم",
+    expertise: "پزشکی چشم",
     services: ["جراحی شبکیه", "درمان گلوکوم"],
     serviceType: ["tell", "in_person"],
     star: 4.7,
@@ -198,7 +198,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 17,
     name: "دکتر محسن کریمی",
-    specialtie: "پزشکی گوش، حلق و بینی",
+    expertise: "پزشکی گوش، حلق و بینی",
     services: ["جراحی سینوس", "درمان وزوز گوش"],
     serviceType: ["in_person", "online"],
     star: 4.1,
@@ -209,7 +209,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 18,
     name: "دکتر زهرا موسوی",
-    specialtie: "پزشکی ارتوپدی",
+    expertise: "پزشکی ارتوپدی",
     services: ["جراحی زانو", "درمان شکستگی‌ها"],
     serviceType: ["online", "tell"],
     star: 3.8,
@@ -221,7 +221,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 19,
     name: "دکتر رضا احمدی",
-    specialtie: "پزشکی عفونی",
+    expertise: "پزشکی عفونی",
     services: ["درمان اچ آی وی", "درمان سل"],
     serviceType: ["tell", "in_person"],
     star: 4.2,
@@ -233,7 +233,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 20,
     name: "دکتر نسرین رضایی",
-    specialtie: "پزشکی غدد",
+    expertise: "پزشکی غدد",
     services: ["درمان دیابت", "درمان اختلالات تیروئید"],
     serviceType: ["in_person", "online"],
     star: 4.6,
@@ -245,7 +245,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 21,
     name: "دکتر مهدی رضایی",
-    specialtie: "پزشکی روانپزشکی",
+    expertise: "پزشکی روانپزشکی",
     services: ["درمان افسردگی", "درمان اضطراب"],
     serviceType: ["online", "tell"],
     star: 3.9,
@@ -256,7 +256,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 22,
     name: "دکتر زهرا احمدی",
-    specialtie: "پزشکی آلرژی و ایمونولوژی",
+    expertise: "پزشکی آلرژی و ایمونولوژی",
     services: ["درمان آلرژی", "درمان آسم"],
     serviceType: ["in_person", "online"],
     star: 4.3,
@@ -269,7 +269,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 23,
     name: "دکتر محسن حسینی",
-    specialtie: "پزشکی اورژانس",
+    expertise: "پزشکی اورژانس",
     services: ["مدیریت تروما", "احیای قلبی ریوی"],
     serviceType: ["in_person", "tell"],
     star: 4.0,
@@ -280,7 +280,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 24,
     name: "دکتر سعید موسوی",
-    specialtie: "پزشکی طب سنتی",
+    expertise: "پزشکی طب سنتی",
     services: ["درمان با گیاهان دارویی", "حجامت"],
     serviceType: ["online", "tell"],
     star: 3.7,
@@ -292,7 +292,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 25,
     name: "دکتر مریم رضایی",
-    specialtie: "پزشکی طب سوزنی",
+    expertise: "پزشکی طب سوزنی",
     services: ["درمان دردهای مزمن", "درمان میگرن"],
     serviceType: ["in_person", "online"],
     star: 4.5,
@@ -304,7 +304,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 26,
     name: "دکتر رضا کریمی",
-    specialtie: "پزشکی طب کار",
+    expertise: "پزشکی طب کار",
     services: ["معاینات دوره‌ای", "درمان بیماری‌های شغلی"],
     serviceType: ["tell", "in_person"],
     star: 3.8,
@@ -315,7 +315,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 27,
     name: "دکتر نسرین احمدی",
-    specialtie: "پزشکی طب سالمندان",
+    expertise: "پزشکی طب سالمندان",
     services: ["درمان پوکی استخوان", "درمان آلزایمر"],
     serviceType: ["online", "tell"],
     star: 4.1,
@@ -327,7 +327,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 28,
     name: "دکتر علی حسینی",
-    specialtie: "پزشکی طب مسافرت",
+    expertise: "پزشکی طب مسافرت",
     services: ["واکسیناسیون مسافرت", "درمان بیماری‌های مناطق گرمسیری"],
     serviceType: ["in_person", "online"],
     star: 4.4,
@@ -339,7 +339,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 29,
     name: "دکتر فاطمه رضایی",
-    specialtie: "پزشکی طب خواب",
+    expertise: "پزشکی طب خواب",
     services: ["درمان اختلالات خواب", "درمان خروپف"],
     serviceType: ["tell", "in_person"],
     star: 3.6,
@@ -351,7 +351,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 30,
     name: "دکتر محسن احمدی",
-    specialtie: "پزشکی طب پیشگیری",
+    expertise: "پزشکی طب پیشگیری",
     services: ["غربالگری سرطان", "پیشگیری از بیماری‌های قلبی"],
     serviceType: ["online", "tell"],
     star: 4.7,
@@ -362,7 +362,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 31,
     name: "دکتر زهرا رضایی",
-    specialtie: "پزشکی طب اعتیاد",
+    expertise: "پزشکی طب اعتیاد",
     services: ["درمان اعتیاد", "سم‌زدایی"],
     serviceType: ["in_person", "online"],
     star: 4.2,
@@ -373,7 +373,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 32,
     name: "دکتر رضا حسینی",
-    specialtie: "پزشکی طب سفر",
+    expertise: "پزشکی طب سفر",
     services: ["واکسیناسیون مسافرت", "درمان بیماری‌های مناطق گرمسیری"],
     serviceType: ["tell", "in_person"],
     star: 3.9,
@@ -384,7 +384,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 33,
     name: "دکتر نسرین کریمی",
-    specialtie: "پزشکی طب سالمندان",
+    expertise: "پزشکی طب سالمندان",
     services: ["درمان پوکی استخوان", "درمان آلزایمر"],
     serviceType: ["online", "tell"],
     star: 4.0,
@@ -395,7 +395,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 34,
     name: "دکتر علی احمدی",
-    specialtie: "پزشکی طب کار",
+    expertise: "پزشکی طب کار",
     services: ["معاینات دوره‌ای", "درمان بیماری‌های شغلی"],
     serviceType: ["in_person", "online"],
     star: 4.3,
@@ -406,7 +406,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 35,
     name: "دکتر فاطمه موسوی",
-    specialtie: "پزشکی طب سوزنی",
+    expertise: "پزشکی طب سوزنی",
     services: ["درمان دردهای مزمن", "درمان میگرن"],
     serviceType: ["tell", "in_person"],
     star: 4.6,
@@ -417,7 +417,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 36,
     name: "دکتر محسن رضایی",
-    specialtie: "پزشکی طب سنتی",
+    expertise: "پزشکی طب سنتی",
     services: ["درمان با گیاهان دارویی", "حجامت"],
     serviceType: ["online", "tell"],
     star: 3.5,
@@ -428,7 +428,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 37,
     name: "دکتر زهرا احمدی",
-    specialtie: "پزشکی اورژانس",
+    expertise: "پزشکی اورژانس",
     services: ["مدیریت تروما", "احیای قلبی ریوی"],
     serviceType: ["in_person", "online"],
     star: 4.1,
@@ -439,7 +439,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 38,
     name: "دکتر رضا کریمی",
-    specialtie: "پزشکی آلرژی و ایمونولوژی",
+    expertise: "پزشکی آلرژی و ایمونولوژی",
     services: ["درمان آلرژی", "درمان آسم"],
     serviceType: ["tell", "in_person"],
     star: 4.4,
@@ -450,7 +450,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 39,
     name: "دکتر نسرین حسینی",
-    specialtie: "پزشکی روانپزشکی",
+    expertise: "پزشکی روانپزشکی",
     services: ["درمان افسردگی", "درمان اضطراب"],
     serviceType: ["online", "tell"],
     star: 3.8,
@@ -461,7 +461,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 40,
     name: "دکتر علی موسوی",
-    specialtie: "پزشکی طب پیشگیری",
+    expertise: "پزشکی طب پیشگیری",
     services: ["غربالگری سرطان", "پیشگیری از بیماری‌های قلبی"],
     serviceType: ["in_person", "online"],
     star: 4.5,

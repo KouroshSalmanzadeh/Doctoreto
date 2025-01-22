@@ -21,7 +21,7 @@ export default function Error({ error, reset }: Props): ReactElement {
         <p>با عرض پوزش، لطفن با تیم پشتیبانی تماس بگیرید</p>
       </div>
       <div className={styles.vector}>
-        <Image src={errorImg} alt="error" />
+        <Image src={errorImg} alt="" />
       </div>
       <div className={styles.actions}>
         <button onClick={reset}>تلاش مجدد</button>

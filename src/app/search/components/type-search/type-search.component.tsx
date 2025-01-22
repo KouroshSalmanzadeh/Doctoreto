@@ -65,7 +65,7 @@ export default function TypeSearchComponent() {
 
   return (
     <div className={styles.type_search}>
-      <span onClick={changeActiveType} className={styles.active} id="in_person">
+      <span onClick={changeActiveType} className={styles.active} id="inPerson">
         حضوری
       </span>
       <span onClick={changeActiveType} id="online">

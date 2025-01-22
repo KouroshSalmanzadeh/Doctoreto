@@ -52,96 +52,94 @@ export default function FilterResultComponent() {
     return (
       <div className={styles.result}>
         <div className={styles.not_found}>
-          <Image src={NotfoundSearch} alt="جست و جوی مورد نظر یافت نشد" />
+          <Image src={NotfoundSearch} alt="" />
           <h2>جست و جوی مورد نظر یافت نشد!</h2>
         </div>
       </div>
-    )
+    );
   }
 
   return (
     <div className={styles.result}>
-      {
-        filteredDoctors.map((doctor) => (
-          <div key={doctor.id} className={styles.doctorCard}>
-            <div className={styles.info}>
-              <div className={styles.info_container}>
-                <div className={styles.right_box}>
-                  <span className={styles.profile}>
-                    <MingcuteUser3Fill />
+      {filteredDoctors.map((doctor) => (
+        <div key={doctor.id} className={styles.doctorCard}>
+          <div className={styles.info}>
+            <div className={styles.info_container}>
+              <div className={styles.right_box}>
+                <span className={styles.profile}>
+                  <MingcuteUser3Fill />
+                </span>
+                <div className={styles.rate}>
+                  <span>
+                    <MingcuteStarFill />
+                    <b>{doctor.star}</b>
                   </span>
-                  <div className={styles.rate}>
-                    <span>
-                      <MingcuteStarFill />
-                      <b>{doctor.star}</b>
-                    </span>
-                    <label> {` (${doctor.reviewCount} نظر)`}</label>
-                  </div>
-                </div>
-                <div className={styles.left_box}>
-                  <h3>{doctor.name}</h3>
-                  <p>تخصص: {doctor.expertise}</p>
-                  <p>خدمات: {doctor.services.join(", ")}</p>
-                  <p className={styles.service_types}>
-                    {doctor.serviceType.map((item, i) => (
-                      <span key={i}>
-                        {item === "in_person"
-                          ? "حضوری"
-                          : item === "online"
-                            ? "چت آنلاین"
-                            : "تلفنی"}
-                        {item === "in_person" ? (
-                          <MingcuteStethoscopeLine />
-                        ) : item === "online" ? (
-                          <MingcuteChat1Line />
-                        ) : (
-                          <MingcutePhoneCallLine />
-                        )}
-                      </span>
-                    ))}
-                  </p>
+                  <label> {` (${doctor.reviewCount} نظر)`}</label>
                 </div>
               </div>
-              <Link href={"#"} className={styles.view_profile}>
-                <span>مشاهده پروفایل</span>
-                <MingcuteLeftFill />
-              </Link>
+              <div className={styles.left_box}>
+                <h3>{doctor.name}</h3>
+                <p>تخصص: {doctor.expertise}</p>
+                <p>خدمات: {doctor.services.join(", ")}</p>
+                <p className={styles.service_types}>
+                  {doctor.serviceType.map((item, i) => (
+                    <span key={i}>
+                      {item === "inPerson"
+                        ? "حضوری"
+                        : item === "online"
+                          ? "چت آنلاین"
+                          : "تلفنی"}
+                      {item === "inPerson" ? (
+                        <MingcuteStethoscopeLine />
+                      ) : item === "online" ? (
+                        <MingcuteChat1Line />
+                      ) : (
+                        <MingcutePhoneCallLine />
+                      )}
+                    </span>
+                  ))}
+                </p>
+              </div>
             </div>
-            <div className={styles.details}>
+            <Link href={"#"} className={styles.view_profile}>
+              <span>مشاهده پروفایل</span>
+              <MingcuteLeftFill />
+            </Link>
+          </div>
+          <div className={styles.details}>
+            <div className={styles.item_detail}>
+              <span>
+                <MingcuteLocationLine />
+                آدرس:
+              </span>
+              {doctor.address}
+            </div>
+            {doctor.price && (
               <div className={styles.item_detail}>
                 <span>
-                  <MingcuteLocationLine />
-                  آدرس:
+                  <MingcuteCashLine />
+                  هزینه ویزیت:
                 </span>
-                {doctor.address}
+                {doctor.price + " "}
+                تومان
               </div>
-              {doctor.price && (
-                <div className={styles.item_detail}>
-                  <span>
-                    <MingcuteCashLine />
-                    هزینه ویزیت:
-                  </span>
-                  {doctor.price + " "}
-                  تومان
-                </div>
-              )}
-              {doctor.lastFreeTime && (
-                <div className={styles.item_detail}>
-                  <span>
-                    <MingcuteCalendarTimeAddLine />
-                    اولین نوبت آزاد:
-                  </span>
-                  {doctor.lastFreeTime}
-                </div>
-              )}
-            </div>
-            <div className={styles.buttons}>
-              <button>دریافت مشاوره</button>
-              <button>مشاهده پروفایل</button>
-            </div>
+            )}
+            {doctor.lastFreeTime && (
+              <div className={styles.item_detail}>
+                <span>
+                  <MingcuteCalendarTimeAddLine />
+                  اولین نوبت آزاد:
+                </span>
+                {doctor.lastFreeTime}
+              </div>
+            )}
           </div>
-        ))
-      }
+          <div className={styles.buttons}>
+            <button>دریافت مشاوره</button>
+            <button>مشاهده پروفایل</button>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

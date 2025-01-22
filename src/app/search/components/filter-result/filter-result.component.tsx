@@ -1,11 +1,8 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
-
+import { useContext, useMemo } from "react";
 import styles from "./filter-result.module.css";
-
 import { doctors } from "@/mock/doctors";
-
 import { FilterContext } from "@/app/search/components/filter/filter-provider.component";
 
 import MingcuteUser3Fill from "@/icons/MingcuteUser3Fill";
@@ -19,29 +16,21 @@ import MingcuteCalendarTimeAddLine from "@/icons/MingcuteCalendarTimeAddLine";
 import MingcuteLeftFill from "@/icons/MingcuteLeftFill";
 
 import NotfoundSearch from "@/assets/illastrations/not-found-search.svg";
-
 import Image from "next/image";
 import Link from "next/link";
-
 import ButtonComponent from "@/components/button/button.component";
 
 export default function FilterResultComponent() {
   const { filters } = useContext(FilterContext);
 
-  const [filteredDoctors, setFilteredDoctors] = useState(doctors);
-
-  useEffect(() => {
-    const filtered = doctors.filter((doctor) => {
-      const matchesServiceType =
-        filters.plural === "" || doctor.plural.includes(filters.plural);
-      const matchesExpertise =
-        filters.expertise === "" || doctor.expertise === filters.expertise;
-      const matchesService =
-        filters.service === "" || doctor.services.includes(filters.service);
+  const filteredDoctors = useMemo(() => {
+    return doctors.filter((doctor) => {
+      const matchesServiceType = filters.plural === "" || doctor.plural.includes(filters.plural);
+      const matchesExpertise = filters.expertise === "" || doctor.expertise === filters.expertise;
+      const matchesService = filters.service === "" || doctor.services.includes(filters.service);
 
       return matchesServiceType && matchesExpertise && matchesService;
     });
-    setFilteredDoctors(filtered);
   }, [filters.service, filters.plural, filters.expertise]);
 
   if (filteredDoctors.length === 0) {

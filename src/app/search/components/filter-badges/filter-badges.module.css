@@ -22,10 +22,10 @@
     font-size: var(--fz-200);
     font-weight: 300;
 
-    transition: all ease 0.2s;
+    transition: opacity ease 0.2s;
 
     &:hover {
-      opacity: 0.3;
+      opacity: 0.8;
     }
   }
 }

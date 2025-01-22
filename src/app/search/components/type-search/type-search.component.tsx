@@ -1,11 +1,12 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useCallback, useMemo } from "react";
 import styles from "./type-search.module.css";
 import { FilterContext } from "@/app/search/components/filter/filter-provider.component";
 
 export default function TypeSearchComponent() {
   const [resize, setResize] = useState<number>(0);
+  const [type, setType] = useState<string>("inPerson");
 
   const { setSelectedFilters } = useContext(FilterContext);
 
@@ -16,64 +17,64 @@ export default function TypeSearchComponent() {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  const offsetLeft = (left: number) => {
-    document.documentElement.style.setProperty(
-      "--offset-left-active-type-search",
-      left + "px",
-    );
-  };
-
-  const offsetWidth = (width: number) => {
-    document.documentElement.style.setProperty(
-      "--offset-width-active-type-search",
-      width + "px",
-    );
-  };
+  const updateOffset = useCallback((element: HTMLElement | null) => {
+    if (element) {
+      document.documentElement.style.setProperty(
+        "--offset-left-active-type-search",
+        `${element.offsetLeft}px`,
+      );
+      document.documentElement.style.setProperty(
+        "--offset-width-active-type-search",
+        `${element.offsetWidth}px`,
+      );
+    }
+  }, []);
 
   useEffect(() => {
-    const prevItem = document.querySelector(
+    const activeElement = document.querySelector(
       `span.${styles.active}`,
     ) as HTMLElement;
+    updateOffset(activeElement);
+  }, [resize, type, updateOffset]);
 
-    offsetLeft(prevItem?.offsetLeft);
-    offsetWidth(prevItem?.offsetWidth);
+  const changeActiveType = useCallback(
+    (e: React.MouseEvent<HTMLElement>): void => {
+      const currentItem = e.target as HTMLElement;
 
-    return () => {
-      offsetLeft(prevItem?.offsetLeft);
-      offsetWidth(prevItem?.offsetWidth);
-    };
-  }, [resize]);
+      updateOffset(currentItem);
 
-  const changeActiveType = (e: React.MouseEvent<HTMLElement>): void => {
-    const prevItem = document.querySelector(`span.${styles.active}`);
-    const currentItem = e.target as HTMLElement;
+      setSelectedFilters((prev) => ({ ...prev, plural: currentItem.id }));
+      setType(currentItem.id);
+    },
+    [setSelectedFilters, updateOffset],
+  );
 
-    prevItem?.classList.remove(styles.active);
-    currentItem?.classList.add(styles.active);
-
-    offsetLeft(currentItem?.offsetLeft);
-    offsetWidth(currentItem?.offsetWidth);
-
-    setSelectedFilters((prev) => ({ ...prev, plural: currentItem.id }));
-  };
+  const types = useMemo(
+    () => [
+      { id: "inPerson", label: "حضوری" },
+      { id: "online", label: "چت آنلاین" },
+      { id: "tell", label: "تلفنی" },
+    ],
+    [],
+  );
 
   return (
     <div className={styles.type_search}>
-      <span onClick={changeActiveType} className={styles.active} id="inPerson">
-        حضوری
-      </span>
-      <span onClick={changeActiveType} id="online">
-        چت آنلاین
-      </span>
-      <span onClick={changeActiveType} id="tell">
-        تلفنی
-      </span>
+      {types.map(({ id, label }) => (
+        <span
+          key={id}
+          onClick={changeActiveType}
+          className={`${type === id && styles.active}`}
+          id={id}
+        >
+          {label}
+        </span>
+      ))}
     </div>
   );
 }

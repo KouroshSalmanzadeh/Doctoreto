@@ -11,12 +11,13 @@
   --color-gray-10: hsl(0deg 0% 98%);
 
   --bg-header: hsla(208, 82%, 32%, 0.2);
+  --bg-footer: hsla(208, 82%, 32%, 0.2);
 
   --color-default-background: hsl(208deg 82% 98%);
   --color-default-foreground: var(--color-gray-98);
 
   --color-primary: hsl(208deg 82% 32%);
-  --color-primary-fade: hsl(208, 76%, 97%);
+  --color-primary-fade: var(--bg-header);
   --color-primary-lighter: hsl(208deg 82% 36%);
   --color-primary-darker: hsl(208deg 82% 28%);
   --color-primary-opposite: var(--color-gray-10);
@@ -118,7 +119,8 @@ body {
   }
 
   .tagline {
-    background-color: var(--color-gray-16);
+    background-color: var(--color-primary);
+    color: var(--white-color);
 
     padding-block: 1rem;
 

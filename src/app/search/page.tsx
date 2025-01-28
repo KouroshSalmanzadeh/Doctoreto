@@ -15,8 +15,17 @@ import specialties from "@/mock/specialties.json";
 import services from "@/mock/services.json";
 
 import FilterBadgesComponent from "./components/filter-badges/filter-badges.component";
+import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
 
-export default function page(): ReactElement {
+type SearchPageProps = {
+  searchParams: { query?: string };
+};
+
+export default function page({ searchParams }: SearchPageProps): ReactElement {
+  const { query } = searchParams;
+  console.log(query);
+  
+
   return (
     <FilterComponent>
       <div className={styles.page}>
@@ -50,7 +59,10 @@ export default function page(): ReactElement {
             </div>
           </div>
         </div>
-        <FilterResultComponent />
+        <div className={styles["left-box"]}>
+          <GlobalSearchBoxComponent value={query} />
+          <FilterResultComponent />
+        </div>
       </div>
     </FilterComponent>
   );

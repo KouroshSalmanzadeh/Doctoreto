@@ -6,6 +6,8 @@ import GlobalSearchBoxComponent from "@/components/global-search-box/global-sear
 
 import DoctoretoLogo from "@/logo/doctoreto.logo";
 
+import LastSearchItemComponent from "@/components/last-search-item/LastSearchItem.component";
+
 export default function Home(): ReactElement {
   return (
     <div className={styles.home}>
@@ -17,8 +19,8 @@ export default function Home(): ReactElement {
       <div className={styles.history}>
         <div className={styles.title}>آخرین جستجوهای شما</div>
         <ul>
-          <li>ارتوپد</li>
-          <li>قلب و عروق</li>
+          <LastSearchItemComponent title="ارتوپد" />
+          <LastSearchItemComponent title="قلب و عروق" />
         </ul>
       </div>
     </div>

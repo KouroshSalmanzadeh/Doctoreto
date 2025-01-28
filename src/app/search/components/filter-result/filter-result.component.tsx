@@ -1,8 +1,11 @@
 "use client";
 
 import { useContext, useMemo } from "react";
+
 import styles from "./filter-result.module.css";
+
 import { doctors } from "@/mock/doctors";
+
 import { FilterContext } from "@/app/search/components/filter/filter-provider.component";
 
 import MingcuteUser3Fill from "@/icons/MingcuteUser3Fill";

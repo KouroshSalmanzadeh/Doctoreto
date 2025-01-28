@@ -25,15 +25,24 @@
 
     top: 8rem;
 
-    .title {
+    .title-and-clear {
+      width: 100%;
+
       display: flex;
       align-items: center;
-      gap: 0.2rem;
-
-      svg {
-        font-size: var(--fz-600);
+      justify-content: space-between;
+      
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+  
+        svg {
+          font-size: var(--fz-600);
+        }
       }
     }
+
 
     .type_search {
       margin-bottom: 1.5rem;

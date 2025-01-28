@@ -1,0 +1,27 @@
+.button {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+
+    padding: .2rem .5rem;
+
+    border-radius: 999rem;
+
+    border: none;
+
+    background-color: var(--color-secondary);
+
+    opacity: .6;
+
+    box-shadow: var(--box-shadow-lg);
+
+    cursor: pointer;
+
+    transition: opacity ease .2s;
+
+    font-size: var(--fz-300);
+
+    &:hover {
+        opacity: 1;
+    }
+}

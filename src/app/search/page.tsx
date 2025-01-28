@@ -16,23 +16,24 @@ import services from "@/mock/services.json";
 
 import FilterBadgesComponent from "./components/filter-badges/filter-badges.component";
 import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
+import ClearFiltersButton from "./components/clear-filters-button/ClearFiltersButton";
 
 type SearchPageProps = {
   searchParams: { query?: string };
 };
 
 export default function page({ searchParams }: SearchPageProps): ReactElement {
-  const { query } = searchParams;
-  console.log(query);
-  
 
   return (
-    <FilterComponent>
+    <FilterComponent searchParams={searchParams && searchParams}>
       <div className={styles.page}>
         <div className={styles.filter}>
-          <div className={styles.title}>
-            <MingcuteFilter2Line />
-            <h3>فیلتر ها</h3>
+          <div className={styles["title-and-clear"]}>
+            <div className={styles.title}>
+              <MingcuteFilter2Line />
+              <h3>فیلتر ها</h3>
+            </div>
+            <ClearFiltersButton />
           </div>
           <div className={styles.filter_items}>
             <div className={styles.type_search}>
@@ -60,7 +61,7 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
           </div>
         </div>
         <div className={styles["left-box"]}>
-          <GlobalSearchBoxComponent value={query} />
+          <GlobalSearchBoxComponent />
           <FilterResultComponent />
         </div>
       </div>

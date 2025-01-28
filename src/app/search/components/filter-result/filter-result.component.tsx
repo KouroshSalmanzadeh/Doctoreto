@@ -28,16 +28,19 @@ export default function FilterResultComponent() {
 
   const filteredDoctors = useMemo(() => {
     return doctors.filter((doctor) => {
-      const matchesServiceType =
-        filters.plural === "" || doctor.plural.includes(filters.plural);
-      const matchesExpertise =
-        filters.expertise === "" || doctor.expertise === filters.expertise;
-      const matchesService =
-        filters.service === "" || doctor.services.includes(filters.service);
+      const matchesServiceType = filters.plural === "" || doctor.plural.includes(filters.plural);
+      const matchesExpertise = filters.expertise === "" || doctor.expertise === filters.expertise;
+      const matchesService = filters.service === "" || doctor.services.includes(filters.service);
+      const matchesQuery = !filters.query || Object.values({
+        name: doctor.name,
+        expertise: doctor.expertise,
+        services: doctor.services.join(" "),
+        address: doctor.address,
+      }).some((field) => field.includes(filters.query));
 
-      return matchesServiceType && matchesExpertise && matchesService;
+      return matchesServiceType && matchesExpertise && matchesService && matchesQuery;
     });
-  }, [filters.service, filters.plural, filters.expertise]);
+  }, [filters.service, filters.plural, filters.expertise, filters.query]);
 
   if (filteredDoctors.length === 0) {
     return (

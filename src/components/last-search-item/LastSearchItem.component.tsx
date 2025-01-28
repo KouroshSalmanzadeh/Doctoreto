@@ -1,12 +1,12 @@
 "use client";
 
-import styles from "./lastSearchItem.module.css"
+import styles from "./lastSearchItem.module.css";
 
-import HandleSearchFunc from '@/utils/HandleSearchFunc';
+import HandleSearchFunc from "@/utils/HandleSearchFunc";
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
-import React from 'react';
+import React from "react";
 
 type Props = {
   title: string;
@@ -20,6 +20,8 @@ export default function LastSearchItemComponent({ title }: Props) {
   };
 
   return (
-    <li className={styles.item} onClick={handleClick}>{title}</li>
+    <li className={styles.item} onClick={handleClick}>
+      {title}
+    </li>
   );
 }

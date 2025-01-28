@@ -11,11 +11,10 @@ import MingcuteHospitalLine from "@/icons/MingcuteHospitalLine";
 import MingcutePhoneCallLine from "@/icons/MingcutePhoneCallLine";
 
 export default function TypeSearchComponent() {
-  const { filters ,dispatch } = useContext(FilterContext);
-  
+  const { filters, dispatch } = useContext(FilterContext);
+
   const [resize, setResize] = useState<number>(0);
   const [type, setType] = useState<string>("inPerson");
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -49,9 +48,9 @@ export default function TypeSearchComponent() {
     updateOffset(activeElement);
   }, [resize, type, updateOffset]);
 
-  useEffect(()=>{
-    setType(filters.plural)
-  },[filters.plural]);
+  useEffect(() => {
+    setType(filters.plural);
+  }, [filters.plural]);
 
   const changeActiveType = useCallback(
     (e: React.MouseEvent<HTMLElement>): void => {

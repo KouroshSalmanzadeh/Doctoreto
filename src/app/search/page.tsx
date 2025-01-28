@@ -23,7 +23,6 @@ type SearchPageProps = {
 };
 
 export default function page({ searchParams }: SearchPageProps): ReactElement {
-
   return (
     <FilterComponent searchParams={searchParams && searchParams}>
       <div className={styles.page}>

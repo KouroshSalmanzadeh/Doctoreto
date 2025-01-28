@@ -7,7 +7,7 @@ type Props = {
   searchParams: {
     query?: string;
   };
-}
+};
 
 type Filters = {
   service: string;
@@ -21,7 +21,7 @@ type Action =
   | { type: "SET_EXPERTISE"; payload: string }
   | { type: "SET_PLURAL"; payload: string }
   | { type: "SET_QUERY"; payload: string }
-  | { type: "CLEAR_ALL"; };
+  | { type: "CLEAR_ALL" };
 
 type FilterContextType = {
   filters: Filters;
@@ -51,7 +51,7 @@ const filtersReducer = (state: Filters, action: Action): Filters => {
     case "SET_QUERY":
       return { ...state, query: action.payload };
     case "CLEAR_ALL":
-      return { plural: "inPerson", service: "" , expertise:"" , query: ""};
+      return { plural: "inPerson", service: "", expertise: "", query: "" };
     default:
       return state;
   }
@@ -60,11 +60,11 @@ const filtersReducer = (state: Filters, action: Action): Filters => {
 export default function FilterComponent({ children, searchParams }: Props) {
   const [filters, dispatch] = useReducer(filtersReducer, initialState);
 
-  useEffect(()=> {
-  if (searchParams?.query) {
-      dispatch({type: "SET_QUERY", payload: searchParams.query})
+  useEffect(() => {
+    if (searchParams?.query) {
+      dispatch({ type: "SET_QUERY", payload: searchParams.query });
     }
-  },[searchParams]);
+  }, [searchParams]);
 
   return (
     <FilterContext.Provider value={{ filters, dispatch }}>

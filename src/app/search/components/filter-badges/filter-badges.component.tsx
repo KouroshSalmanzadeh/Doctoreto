@@ -10,7 +10,7 @@ import MingcuteCloseFill from "@/icons/MingcuteCloseFill";
 
 export default function FilterBadgesComponent() {
   const { filters, dispatch } = useContext(FilterContext);
-  
+
   if (!filters.service && !filters.expertise && !filters.query) {
     return null;
   }

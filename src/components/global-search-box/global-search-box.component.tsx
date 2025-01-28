@@ -1,6 +1,12 @@
-"use client"
+"use client";
 
-import React, { ReactElement, useContext, useEffect, useRef, useState } from "react";
+import React, {
+  ReactElement,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import styles from "./global-search-box.module.css";
 
@@ -13,10 +19,11 @@ import { FilterContext } from "@/app/search/components/filter/filter-provider.co
 
 type Props = {
   className?: string;
-}
+};
 
-export default function GlobalSearchBoxComponent({className}: Props): ReactElement {
-  
+export default function GlobalSearchBoxComponent({
+  className,
+}: Props): ReactElement {
   const { filters } = useContext(FilterContext);
 
   const router = useRouter();
@@ -24,9 +31,9 @@ export default function GlobalSearchBoxComponent({className}: Props): ReactEleme
 
   const [imputValue, setInputvalue] = useState<string | undefined>("");
 
-  useEffect(()=>{
+  useEffect(() => {
     setInputvalue(filters.query);
-  },[filters.query])
+  }, [filters.query]);
 
   useEffect(() => {
     const handleSearch = (e: KeyboardEvent) => {
@@ -52,7 +59,9 @@ export default function GlobalSearchBoxComponent({className}: Props): ReactEleme
   }, [router]);
 
   return (
-    <div className={`${styles["global-search-box"]} ${className ? className : ""}`}>
+    <div
+      className={`${styles["global-search-box"]} ${className ? className : ""}`}
+    >
       <div className={styles.prefix}>
         <MingcuteSearchLine />
       </div>
@@ -60,7 +69,7 @@ export default function GlobalSearchBoxComponent({className}: Props): ReactEleme
         ref={inputRef}
         type="text"
         value={imputValue}
-        onChange={(e)=>setInputvalue(e.currentTarget.value)}
+        onChange={(e) => setInputvalue(e.currentTarget.value)}
         placeholder="نام بیماری، تخصص، پزشک، بیمارستان و ..."
       />
       <div className={styles.divider}></div>

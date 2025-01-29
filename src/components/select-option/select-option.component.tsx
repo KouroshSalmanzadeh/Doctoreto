@@ -22,7 +22,7 @@ type Props = {
   label?: string;
 } & React.ComponentPropsWithoutRef<"input">;
 
-const SeleceOptionComponent = React.memo(
+const SelectOptionComponent = React.memo(
   ({ name, id, options, label, ...props }: Props): ReactElement => {
     const [isOpen, setIsOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
@@ -124,6 +124,6 @@ const SeleceOptionComponent = React.memo(
   },
 );
 
-SeleceOptionComponent.displayName = "SeleceOptionComponent"; // برای رفع ارور ESLint
+SelectOptionComponent.displayName = "SelectOptionComponent"; // برای رفع ارور ESLint
 
-export default SeleceOptionComponent;
+export default SelectOptionComponent;

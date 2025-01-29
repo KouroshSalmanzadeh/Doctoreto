@@ -9,7 +9,7 @@ import MingcuteFilter2Line from "@/icons/MingcuteFilter2Line";
 import TypeSearchComponent from "@/app/search/components/type-search/type-search.component";
 import FilterResultComponent from "./components/filter-result/filter-result.component";
 
-import SeleceOptionComponent from "@/components/select-option/selece-option.component";
+import SelectOptionComponent from "@/components/select-option/select-option.component";
 
 import specialties from "@/mock/specialties.json";
 import services from "@/mock/services.json";

@@ -47,7 +47,7 @@
       .type_search {
         margin-bottom: 1.5rem;
       }
-  
+
       .card:not(:last-child) {
         border-bottom: 1px solid var(--color-gray-16);
         margin-bottom: 1rem;

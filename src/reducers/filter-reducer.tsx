@@ -29,7 +29,13 @@ export function filtersReducer(state: Filters, action: Action): Filters {
     case "remove_filter":
       return { ...state, [action.key]: "" };
     case "clear_all":
-      return { service: "", expertise: "", plural: "inPerson", query: "", gender: "" };
+      return {
+        service: "",
+        expertise: "",
+        plural: "inPerson",
+        query: "",
+        gender: "",
+      };
     default:
       return state;
   }

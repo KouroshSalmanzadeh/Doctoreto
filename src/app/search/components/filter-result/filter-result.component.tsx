@@ -46,7 +46,11 @@ export default function FilterResultComponent() {
         }).some((field) => field.includes(filters.query));
 
       return (
-        matchesServiceType && matchesExpertise && matchesService && matchesGender && matchesQuery
+        matchesServiceType &&
+        matchesExpertise &&
+        matchesService &&
+        matchesGender &&
+        matchesQuery
       );
     });
   }, [filters]);

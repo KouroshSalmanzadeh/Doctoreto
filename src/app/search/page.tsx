@@ -60,7 +60,13 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
             </div>
             <div className={`${styles.card} ${styles["radio-buttons"]}`}>
               <span className="">جنسیت پزشک</span>
-              <RadioButtonComponent name="gender" inputs={[{id: "male", value: "مرد"},{id: "female", value: "خانم"}]} />
+              <RadioButtonComponent
+                name="gender"
+                inputs={[
+                  { id: "male", value: "مرد" },
+                  { id: "female", value: "خانم" },
+                ]}
+              />
             </div>
           </div>
         </div>

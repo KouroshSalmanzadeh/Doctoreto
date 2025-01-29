@@ -1,20 +1,20 @@
-import React, { ComponentProps } from "react";
+import React, { ComponentProps, PropsWithChildren } from "react";
 
 import styles from "./button.module.css";
 
 type Props = ComponentProps<"button"> & {
-  text: string;
+  children: PropsWithChildren;
   isActive?: boolean;
   className?: string;
 };
 
-export default function ButtonComponent({ className, text, ...props }: Props) {
+export default function ButtonComponent({ className, children, ...props }: Props) {
   return (
     <button
       className={`${className ? className : ""} ${styles.button}`}
       {...props}
     >
-      {text}
+      {children}
     </button>
   );
 }

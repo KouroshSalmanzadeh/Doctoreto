@@ -136,8 +136,8 @@ export default function FilterResultComponent() {
             )}
           </div>
           <div className={styles.buttons}>
-            <ButtonComponent text="دریافت مشاوره" />
-            <ButtonComponent text="مشاهده پروفایل" />
+            <ButtonComponent>دریافت مشاوره</ButtonComponent>
+            <ButtonComponent>مشاهده پروفایل</ButtonComponent>
           </div>
         </div>
       ))}

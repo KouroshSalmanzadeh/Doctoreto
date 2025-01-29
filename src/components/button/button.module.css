@@ -1,9 +1,9 @@
 .button {
   width: 100%;
 
-  padding: 0.5rem 0.3rem;
+  padding: 0.5rem 0.3125rem;
 
-  border-radius: .75rem;
+  border-radius: 0.75rem;
 
   background-color: var(--color-primary);
 

@@ -40,7 +40,7 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
             </div>
             <FilterBadgesComponent />
             <div className={styles.card}>
-              <SeleceOptionComponent
+              <SelectOptionComponent
                 label={"تخصص و فوق تخصص"}
                 placeholder={"مثلا فیزیوتراپی"}
                 id="expertises"
@@ -49,7 +49,7 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
               />
             </div>
             <div className={styles.card}>
-              <SeleceOptionComponent
+              <SelectOptionComponent
                 label={"خدمات"}
                 placeholder={"مثلا سی تی اسکن قلب"}
                 id="services"

@@ -35,7 +35,7 @@
       .title {
         display: flex;
         align-items: center;
-        gap: 0.2rem;
+        gap: 0.1875rem;
 
         svg {
           font-size: var(--fz-600);

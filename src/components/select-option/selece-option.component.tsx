@@ -79,7 +79,7 @@ const SeleceOptionComponent = React.memo(
       } else if (id === "services" && filters.service !== searchTerm) {
         setSearchTerm("");
       }
-    }, [filters.expertise, filters.service, searchTerm, id]);
+    }, [filters.expertise, filters.service, id]);
 
     return (
       <div className={styles.container}>

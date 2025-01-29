@@ -68,7 +68,7 @@ const SelectOptionComponent = React.memo(
     // Clear service input when expertises input is filled
     useEffect(() => {
       if (id === "services" && filters.expertise) {
-        dispatch({ type: "remove_filter", key: "service"});
+        dispatch({ type: "remove_filter", key: "service" });
       }
     }, [filters.expertise, dispatch, id]);
 

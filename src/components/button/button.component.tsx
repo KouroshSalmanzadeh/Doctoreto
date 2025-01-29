@@ -7,12 +7,13 @@ type Props = ComponentProps<"button"> & {
   isActive?: boolean;
 };
 
-export default function ButtonComponent({ className, children, ...props }: Props) {
+export default function ButtonComponent({
+  className,
+  children,
+  ...props
+}: Props) {
   return (
-    <button
-      className={`${className ?? ""} ${styles.button}`}
-      {...props}
-    >
+    <button className={`${className ?? ""} ${styles.button}`} {...props}>
       {children}
     </button>
   );

@@ -49,8 +49,7 @@ export default function FilterResultComponent() {
     });
   }, [filters.service, filters.plural, filters.expertise, filters.query]);
 
-console.log(filters);
-
+  console.log(filters);
 
   if (filteredDoctors.length === 0) {
     return (

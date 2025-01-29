@@ -4,7 +4,11 @@ import React, { createContext, ReactNode, useEffect, useReducer } from "react";
 
 import { Filters } from "@/app/search/types/filterTypes";
 
-import { Action, filtersReducer, initialState } from "@/reducers/filter-reducer";
+import {
+  Action,
+  filtersReducer,
+  initialState,
+} from "@/reducers/filter-reducer";
 
 type Props = {
   children: ReactNode;
@@ -20,7 +24,7 @@ type FilterContextType = {
 
 export const FilterContext = createContext<FilterContextType>({
   filters: initialState,
-  dispatch: () => { },
+  dispatch: () => {},
 });
 
 export default function FilterComponent({ children, searchParams }: Props) {
@@ -28,7 +32,11 @@ export default function FilterComponent({ children, searchParams }: Props) {
 
   useEffect(() => {
     if (searchParams?.query) {
-      dispatch({ type: "update_filter", key: "query", payload: searchParams.query });
+      dispatch({
+        type: "update_filter",
+        key: "query",
+        payload: searchParams.query,
+      });
     }
   }, [searchParams]);
 

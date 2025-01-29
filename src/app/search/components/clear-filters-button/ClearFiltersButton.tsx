@@ -14,7 +14,7 @@ export default function ClearFiltersButton() {
   const { filters, dispatch } = useContext(FilterContext);
 
   const handleClick = () => {
-    dispatch({ type: "CLEAR_ALL" });
+    dispatch({ type: "clear_all" });
     router.push(`/search`);
   };
 

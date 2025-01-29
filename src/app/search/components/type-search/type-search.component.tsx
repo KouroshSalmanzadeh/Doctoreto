@@ -58,7 +58,7 @@ export default function TypeSearchComponent() {
 
       updateOffset(currentItem);
 
-      dispatch({ type: "SET_PLURAL", payload: currentItem.id });
+      dispatch({ type: "set_plural", payload: currentItem.id });
       setType(currentItem.id);
     },
     [dispatch, updateOffset],

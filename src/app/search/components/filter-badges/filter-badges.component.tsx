@@ -19,7 +19,7 @@ export default function FilterBadgesComponent() {
     <div className={styles.filterbadges}>
       {filters.service ? (
         <span
-          onClick={() => dispatch({ type: "SET_SERVICE", payload: "" })}
+          onClick={() => dispatch({ type: "set_service", payload: "" })}
           className={styles.badge}
         >
           {filters.service}
@@ -28,7 +28,7 @@ export default function FilterBadgesComponent() {
       ) : null}
       {filters.expertise ? (
         <span
-          onClick={() => dispatch({ type: "SET_EXPERTISE", payload: "" })}
+          onClick={() => dispatch({ type: "set_expertise", payload: "" })}
           className={styles.badge}
         >
           {filters.expertise}
@@ -37,7 +37,7 @@ export default function FilterBadgesComponent() {
       ) : null}
       {filters.query ? (
         <span
-          onClick={() => dispatch({ type: "SET_QUERY", payload: "" })}
+          onClick={() => dispatch({ type: "set_query", payload: "" })}
           className={styles.badge}
         >
           {filters.query}

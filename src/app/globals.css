@@ -53,10 +53,6 @@
   --color-gray-16: hsl(0deg 0% 16%);
   --color-gray-12: hsl(0deg 0% 12%);
   --color-gray-10: hsl(0deg 0% 10%);
-
-  --bg-header: hsla(208, 82%, 32%, 0.2);
-
-  --white-color: hsl(0, 0%, 100%);
 }
 
 ::view-transition-old(root),

@@ -6,6 +6,7 @@
   border-radius: 0.75rem;
 
   background-color: var(--color-primary);
+  color: var(--white-color);
 
   outline: none;
   border: none;

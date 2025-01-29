@@ -73,7 +73,7 @@
   padding: 0;
 }
 
-html {
+html[data-theme="dark"] {
   color-scheme: dark;
 }
 

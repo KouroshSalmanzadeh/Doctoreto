@@ -22,7 +22,8 @@ export default function ClearFiltersButton() {
     !filters.service &&
     !filters.expertise &&
     filters.plural === "inPerson" &&
-    !filters.query
+    !filters.query && 
+    !filters.gender
   ) {
     return null;
   }

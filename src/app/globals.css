@@ -18,8 +18,8 @@
 
   --color-primary: hsl(208deg 82% 32%);
   --color-primary-fade: var(--bg-header);
-  --color-primary-lighter: hsl(208deg 82% 36%);
-  --color-primary-darker: hsl(208deg 82% 28%);
+  --color-primary-lighter: hsl(208, 81%, 44%);
+  --color-primary-darker: hsl(208, 83%, 20%);
   --color-primary-opposite: var(--color-gray-10);
 
   --color-secondary: hsl(342, 100%, 46%);
@@ -37,6 +37,8 @@
   --box-shadow-lg: 0 3px 5px -3px var(--color-gray-98);
 
   --white-color: hsl(0, 0%, 100%);
+
+  --button-hover: var(--color-primary-darker);
 }
 
 :root[data-theme="dark"] {
@@ -53,6 +55,8 @@
   --color-gray-16: hsl(0deg 0% 16%);
   --color-gray-12: hsl(0deg 0% 12%);
   --color-gray-10: hsl(0deg 0% 10%);
+
+  --button-hover: var(--color-primary-lighter);
 }
 
 ::view-transition-old(root),

@@ -10,7 +10,7 @@ type Props = ComponentProps<"button"> & {
 export default function ButtonComponent({ className, children, ...props }: Props) {
   return (
     <button
-      className={`${className ? className : ""} ${styles.button}`}
+      className={`${className ?? ""} ${styles.button}`}
       {...props}
     >
       {children}

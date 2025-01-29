@@ -1,11 +1,10 @@
 import { Filters } from "@/app/search/types/filterTypes";
 
-export type Action =
-    | { type: "set_service"; payload: string }
-    | { type: "set_expertise"; payload: string }
-    | { type: "set_plural"; payload: string }
-    | { type: "set_query"; payload: string }
-    | { type: "clear_all" };
+export type Action = {
+    type: "set_service" | "set_expertise" | "set_plural" | "set_query" | "clear_all";
+    payload: string;
+}
+
 
 export const initialState: Filters = {
     service: "",

@@ -125,13 +125,13 @@ export default function FilterResultComponent() {
                 تومان
               </div>
             )}
-            {doctor.lastFreeTime && (
+            {doctor.firstFreeTime && (
               <div className={styles.item_detail}>
                 <span>
                   <MingcuteCalendarTimeAddLine />
                   اولین نوبت آزاد:
                 </span>
-                {doctor.lastFreeTime}
+                {doctor.firstFreeTime}
               </div>
             )}
           </div>

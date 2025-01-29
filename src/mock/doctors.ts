@@ -11,7 +11,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 42,
     price: "200,000",
     gender: "male",
-    lastFreeTime: "فردا",
+    firstFreeTime: "فردا",
     address: "مشهد - احمد آباد - پاستور 18",
   },
   {
@@ -24,7 +24,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 67,
     price: "200,000",
     gender: "female",
-    lastFreeTime: "دو روز دیگر",
+    firstFreeTime: "دو روز دیگر",
     address: "تهران - تجریش - خیابان شهید فلاحی",
   },
   {
@@ -36,7 +36,7 @@ export const doctors: DoctorModel[] = [
     star: 4.7,
     reviewCount: 89,
     gender: "male",
-    lastFreeTime: "فردا",
+    firstFreeTime: "فردا",
     address: "اصفهان - خیابان چهارباغ - کوچه بهار",
   },
   {
@@ -60,7 +60,7 @@ export const doctors: DoctorModel[] = [
     star: 4.9,
     reviewCount: 98,
     gender: "male",
-    lastFreeTime: "دو روز دیگر",
+    firstFreeTime: "دو روز دیگر",
     address: "تبریز - خیابان امام - کوچه سلامت",
   },
   {
@@ -84,7 +84,7 @@ export const doctors: DoctorModel[] = [
     star: 4.6,
     reviewCount: 76,
     gender: "male",
-    lastFreeTime: "فردا",
+    firstFreeTime: "فردا",
     address: "قم - خیابان معلم - کوچه دانش",
   },
   {
@@ -108,7 +108,7 @@ export const doctors: DoctorModel[] = [
     star: 3.9,
     reviewCount: 49,
     gender: "male",
-    lastFreeTime: "دو روز دیگر",
+    firstFreeTime: "دو روز دیگر",
     address: "اهواز - خیابان نفت - کوچه نارنج",
   },
   {
@@ -132,7 +132,7 @@ export const doctors: DoctorModel[] = [
     star: 4.0,
     reviewCount: 58,
     gender: "male",
-    lastFreeTime: "فردا",
+    firstFreeTime: "فردا",
     address: "یزد - خیابان امام - کوچه کویر",
   },
   {
@@ -168,7 +168,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 82,
     price: "200,000",
     gender: "female",
-    lastFreeTime: "دو روز دیگر",
+    firstFreeTime: "دو روز دیگر",
     address: "بندرعباس - خیابان ساحلی - کوچه دریا",
   },
   {
@@ -192,7 +192,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 88,
     price: "200,000",
     gender: "female",
-    lastFreeTime: "فردا",
+    firstFreeTime: "فردا",
     address: "ساری - خیابان انقلاب - کوچه باران",
   },
   {
@@ -227,7 +227,7 @@ export const doctors: DoctorModel[] = [
     star: 4.2,
     reviewCount: 64,
     gender: "male",
-    lastFreeTime: "دو روز دیگر",
+    firstFreeTime: "دو روز دیگر",
     address: "اراک - خیابان امام - کوچه سلامت",
   },
   {
@@ -263,7 +263,7 @@ export const doctors: DoctorModel[] = [
     reviewCount: 68,
     price: "200,000",
     gender: "female",
-    lastFreeTime: "فردا",
+    firstFreeTime: "فردا",
     address: "تبریز - خیابان امام - کوچه سلامت",
   },
   {
@@ -298,7 +298,7 @@ export const doctors: DoctorModel[] = [
     star: 4.5,
     reviewCount: 81,
     gender: "female",
-    lastFreeTime: "دو روز دیگر",
+    firstFreeTime: "دو روز دیگر",
     address: "رشت - خیابان مطهری - کوچه سبز",
   },
   {
@@ -333,7 +333,7 @@ export const doctors: DoctorModel[] = [
     star: 4.4,
     reviewCount: 74,
     gender: "male",
-    lastFreeTime: "فردا",
+    firstFreeTime: "فردا",
     address: "یزد - خیابان امام - کوچه کویر",
   },
   {

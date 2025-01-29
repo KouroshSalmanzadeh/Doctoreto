@@ -28,7 +28,7 @@ export default function FilterComponent({ children, searchParams }: Props) {
 
   useEffect(() => {
     if (searchParams?.query) {
-      dispatch({ type: "set_query", payload: searchParams.query });
+      dispatch({ type: "update_filter", key: "query", payload: searchParams.query });
     }
   }, [searchParams]);
 

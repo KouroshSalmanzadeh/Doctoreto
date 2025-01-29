@@ -40,9 +40,9 @@ const SelectOptionComponent = React.memo(
         setIsOpen(false);
         setSearchTerm(value);
         if (id === "expertises") {
-          dispatch({ type: "set_expertise", payload: value });
+          dispatch({ type: "update_filter", key: "expertise", payload: value });
         } else if (id === "services") {
-          dispatch({ type: "set_service", payload: value });
+          dispatch({ type: "update_filter", key: "service", payload: value });
         }
       },
       [dispatch, id],
@@ -52,23 +52,23 @@ const SelectOptionComponent = React.memo(
     const handleClear = useCallback(() => {
       setSearchTerm("");
       if (id === "expertises") {
-        dispatch({ type: "set_expertise", payload: "" });
+        dispatch({ type: "remove_filter", key: "expertise" });
       } else if (id === "services") {
-        dispatch({ type: "set_service", payload: "" });
+        dispatch({ type: "remove_filter", key: "service" });
       }
     }, [dispatch, id]);
 
     // Clear expertises input when service input is filled
     useEffect(() => {
       if (id === "expertises" && filters.service) {
-        dispatch({ type: "set_expertise", payload: "" });
+        dispatch({ type: "remove_filter", key: "expertise" });
       }
     }, [filters.service, dispatch, id]);
 
     // Clear service input when expertises input is filled
     useEffect(() => {
       if (id === "services" && filters.expertise) {
-        dispatch({ type: "set_service", payload: "" });
+        dispatch({ type: "remove_filter", key: "service"});
       }
     }, [filters.expertise, dispatch, id]);
 

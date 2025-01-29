@@ -1,9 +1,18 @@
 import { Filters } from "@/app/search/types/filterTypes";
 
-export type Action = {
-    type: "set_service" | "set_expertise" | "set_plural" | "set_query" | "clear_all";
-    payload: string;
-}
+export type Action =
+    | {
+        type: "update_filter";
+        key: keyof Filters;
+        payload: string;
+    }
+    | {
+        type: "remove_filter";
+        key: keyof Filters;
+    }
+    | {
+        type: "clear_all";
+    }
 
 
 export const initialState: Filters = {
@@ -13,18 +22,14 @@ export const initialState: Filters = {
     query: "",
 };
 
-export function filtersReducer(state: Filters, action: Action): Filters {
+export function filtersReducer(state: Filters, action: Action):Filters {
     switch (action.type) {
-        case "set_service":
-            return { ...state, service: action.payload };
-        case "set_expertise":
-            return { ...state, expertise: action.payload };
-        case "set_plural":
-            return { ...state, plural: action.payload };
-        case "set_query":
-            return { ...state, query: action.payload };
+        case "update_filter":
+            return { ...state, [action.key]: action.payload };
+        case "remove_filter":
+            return { ...state , [action.key]: ""}
         case "clear_all":
-            return { plural: "inPerson", service: "", expertise: "", query: "" };
+            return { service: "", expertise: "", plural: "inPerson", query: "" };
         default:
             return state;
     }

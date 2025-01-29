@@ -3,12 +3,18 @@
   align-items: center;
   gap: 0.5rem;
 
-  inline-size: min(50rem, 100%);
+  inline-size: min(54rem, 100%);
 
   padding-inline: 1rem;
 
+  background-color: var(--color-gray-10);
+
   border: 1px solid var(--color-gray-20);
   border-radius: 999rem;
+
+  &:focus-within {
+    background-color: var(--bg-header);
+  }
 
   .prefix {
     display: grid;
@@ -67,6 +73,7 @@
 
   &:focus-within {
     border-color: var(--color-primary);
+    outline: 1px solid var(--color-primary);
 
     .prefix {
       color: var(--color-primary);

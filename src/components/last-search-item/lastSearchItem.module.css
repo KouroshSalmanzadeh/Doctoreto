@@ -1,0 +1,17 @@
+.item {
+  background-color: var(--color-primary);
+  color: var(--white-color);
+  opacity: 0.4;
+
+  padding: 0.25rem 0.75rem;
+
+  border-radius: 999rem;
+
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+
+    cursor: pointer;
+  }
+}

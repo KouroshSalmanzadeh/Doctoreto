@@ -9,6 +9,6 @@ export type DoctorModel = {
   reviewCount: number;
   price?: string;
   gender: string;
-  lastFreeTime?: string;
+  firstFreeTime?: string;
   address: string;
 };

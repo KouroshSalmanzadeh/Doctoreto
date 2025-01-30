@@ -11,4 +11,5 @@ export type DoctorModel = {
   gender: string;
   firstFreeTime?: string;
   address: string;
+  avatar?: string;
 };

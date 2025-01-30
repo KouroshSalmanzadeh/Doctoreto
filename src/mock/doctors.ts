@@ -4,6 +4,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 1,
     name: "دکتر علی محمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/cwLjGvJuCLLs1gwidcB4jxteoW3NOT4sSuz4Lvyc.jpg",
     expertise: "پزشکی داخلی",
     services: ["پلاسما تراپی", "درمان سنگ کلیه"],
     plural: ["inPerson", "online"],
@@ -17,6 +18,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 2,
     name: "دکتر فاطمه احمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2023/4/hyoYGR57yG9Z8M5QyDbDkICrliYPme2DPXtVcp9q.jpg",
     expertise: "پزشکی اطفال",
     services: ["واکسیناسیون", "درمان عفونت ادراری در کودکان"],
     plural: ["online", "tell"],
@@ -30,6 +32,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 3,
     name: "دکتر محسن رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2022/5/MxS6wK8x4oBa8Bv0BP6suV8TOGjVnwKM1FS4B9Me.jpg",
     expertise: "جراحی عمومی",
     services: ["جراحی فتق", "جراحی هیدروسل بیضه"],
     plural: ["inPerson", "online"],
@@ -42,6 +45,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 4,
     name: "دکتر زهرا حسینی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/cwLjGvJuCLLs1gwidcB4jxteoW3NOT4sSuz4Lvyc.jpg",
     expertise: "زنان و زایمان",
     services: ["درمان ناباروری", "جراحی زیبایی زنان"],
     plural: ["tell", "inPerson"],
@@ -54,6 +58,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 5,
     name: "دکتر سعید کریمی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2023/10/O1AUHLUgOGzT6j6DeqkpD7ZBVA9Ans5HMEOrkw3A.jpg",
     expertise: "پزشکی قلب و عروق",
     services: ["الکتروفیزیولوژی قلب", "اینترونشنال کاردیولوژی"],
     plural: ["inPerson", "online", "tell"],
@@ -66,6 +71,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 6,
     name: "دکتر مریم قاسمی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2023/4/aL7D0xvO2mhUVCuLh27cgYzlEnK91NyE9l6BN8DS.jpg",
     expertise: "پزشکی پوست",
     services: ["لیزر درمانی", "درمان زگیل تناسلی"],
     plural: ["online", "tell"],
@@ -78,6 +84,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 7,
     name: "دکتر رضا موسوی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/nNlM0gpQnOerWloZlrONXskWprU84uDx1VJqhfO7.jpg",
     expertise: "پزشکی مغز و اعصاب",
     services: ["درمان ام‌اس", "صرع"],
     plural: ["tell", "inPerson"],
@@ -90,6 +97,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 8,
     name: "دکتر نسرین محمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/zfu5kHcORHsp1vvnsBhgiVUwDMwpiWJCzSD0b4Ht.jpg",
     expertise: "پزشکی گوارش",
     services: ["آندوسکوپی پیشرفته", "درمان بیماری‌های کبد"],
     plural: ["inPerson", "online"],
@@ -102,6 +110,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 9,
     name: "دکتر امیر حسینی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/o1W5alQ2i4tvi2jCVyNgf6ga9vWrHlhmcMJcainy.jpg",
     expertise: "پزشکی کلیه",
     services: ["دیالیز", "پیوند کلیه"],
     plural: ["online", "tell"],
@@ -114,6 +123,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 10,
     name: "دکتر لیلا رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/drtLRSiXSWL2kKplhGxLu5zjMbJwbnLLxj8BvAJN.jpg",
     expertise: "پزشکی خون و سرطان",
     services: ["درمان سرطان‌های خاص", "پیوند مغز استخوان"],
     plural: ["tell", "inPerson"],
@@ -126,6 +136,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 11,
     name: "دکتر حسین احمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/12/JDlCjCCbWEoi3ZHxCkWHUxILFAEDASskvo0AktBb.jpg",
     expertise: "پزشکی روماتولوژی",
     services: ["درمان روماتیسم", "درمان آرتروز"],
     plural: ["inPerson", "online"],
@@ -138,6 +149,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 12,
     name: "دکتر زهرا کریمی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/ioM4fuBq3GiXOhESQGrBDOxcdgNbSZHGfWECh5wz.jpg",
     expertise: "پزشکی طب فیزیکی و توان‌بخشی",
     services: ["فیزیوتراپی", "درمان دردهای مزمن"],
     plural: ["online", "tell"],
@@ -150,6 +162,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 13,
     name: "دکتر محمود رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2024/1/rBKXKEKAf92cHB6WzJPLF5VKlqGaLgUNzWEys73V.jpg",
     expertise: "پزشکی هسته‌ای",
     services: ["درمان سرطان با رادیوتراپی", "اسکن هسته‌ای"],
     plural: ["tell", "inPerson"],
@@ -161,6 +174,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 14,
     name: "دکتر سارا محمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2022/1/jJv6IbQ3oEzmUXli2XsBYnij8SVSYNAjQvboxZNg.jpg",
     expertise: "پزشکی قانونی",
     services: ["تشخیص علت مرگ", "بررسی جراحات"],
     plural: ["inPerson", "online"],
@@ -174,6 +188,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 15,
     name: "دکتر علی رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/Abp4kzuRh174baCXvTiMUcEGU9yfFwxUIQhV7LQM.jpg",
     expertise: "پزشکی ورزشی",
     services: ["درمان آسیب‌های ورزشی", "بازتوانی ورزشی"],
     plural: ["online", "tell"],
@@ -185,6 +200,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 16,
     name: "دکتر فاطمه حسینی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2023/5/C4FNDyhJQpzhcnYvNBASU7KU9sSFc57HGmilZMYt.jpg",
     expertise: "پزشکی چشم",
     services: ["جراحی شبکیه", "درمان گلوکوم"],
     plural: ["tell", "inPerson"],
@@ -198,6 +214,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 17,
     name: "دکتر محسن کریمی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2024/10/Zcmk4afpBaOXUU7UTUo8LJDmKYSJzJeSeDIuM7w6.jpg",
     expertise: "پزشکی گوش، حلق و بینی",
     services: ["جراحی سینوس", "درمان وزوز گوش"],
     plural: ["inPerson", "online"],
@@ -209,6 +226,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 18,
     name: "دکتر زهرا موسوی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2023/4/uFjiue9INHjMx3wiWXi184HLraBu7f8z5o4V64X1.jpg",
     expertise: "پزشکی ارتوپدی",
     services: ["جراحی زانو", "درمان شکستگی‌ها"],
     plural: ["online", "tell"],
@@ -221,6 +239,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 19,
     name: "دکتر رضا احمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/OSUkkSJwTLMQL4uiqqjZ3nOYJIkibcrhFogPkehm.jpg",
     expertise: "پزشکی عفونی",
     services: ["درمان اچ آی وی", "درمان سل"],
     plural: ["tell", "inPerson"],
@@ -233,6 +252,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 20,
     name: "دکتر نسرین رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2022/5/4Hfo1gLGZW4ctDfghEGLKvBq46kvjGIs3J9Uf56W.jpg",
     expertise: "پزشکی غدد",
     services: ["درمان دیابت", "درمان اختلالات تیروئید"],
     plural: ["inPerson", "online"],
@@ -245,6 +265,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 21,
     name: "دکتر مهدی رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/U6nfqjMB4iNwsZ0fnc2iZk5XSX4SgCwrhxMlPMV4.jpg",
     expertise: "پزشکی روانپزشکی",
     services: ["درمان افسردگی", "درمان اضطراب"],
     plural: ["online", "tell"],
@@ -256,6 +277,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 22,
     name: "دکتر زهرا احمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2023/8/bt05pzt1gOEWzmc2y5cSIF7fsqVSXvez3y52tznF.jpg",
     expertise: "پزشکی آلرژی و ایمونولوژی",
     services: ["درمان آلرژی", "درمان آسم"],
     plural: ["inPerson", "online"],
@@ -269,6 +291,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 23,
     name: "دکتر محسن حسینی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/cqc5r9259SustH1VzNo45VUWSoCVWqWPtDs51toc.jpg",
     expertise: "پزشکی اورژانس",
     services: ["مدیریت تروما", "احیای قلبی ریوی"],
     plural: ["inPerson", "tell"],
@@ -280,6 +303,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 24,
     name: "دکتر سعید موسوی",
+    avatar: "",
     expertise: "پزشکی طب سنتی",
     services: ["درمان با گیاهان دارویی", "حجامت"],
     plural: ["online", "tell"],
@@ -292,6 +316,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 25,
     name: "دکتر مریم رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2022/3/QMF2F6kNS1WbuPM5s2aayRSVVDaZEqkA5reYH5PT.jpg",
     expertise: "پزشکی طب سوزنی",
     services: ["درمان دردهای مزمن", "درمان میگرن"],
     plural: ["inPerson", "online"],
@@ -304,6 +329,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 26,
     name: "دکتر رضا کریمی",
+    avatar: "",
     expertise: "پزشکی طب کار",
     services: ["معاینات دوره‌ای", "درمان بیماری‌های شغلی"],
     plural: ["tell", "inPerson"],
@@ -315,6 +341,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 27,
     name: "دکتر نسرین احمدی",
+    avatar: "",
     expertise: "پزشکی طب سالمندان",
     services: ["درمان پوکی استخوان", "درمان آلزایمر"],
     plural: ["online", "tell"],
@@ -327,6 +354,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 28,
     name: "دکتر علی حسینی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2022/1/ahMSOr6LHK75QrRNYWOjTCYNwraz81tM4uBVkem6.jpg",
     expertise: "پزشکی طب مسافرت",
     services: ["واکسیناسیون مسافرت", "درمان بیماری‌های مناطق گرمسیری"],
     plural: ["inPerson", "online"],
@@ -339,6 +367,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 29,
     name: "دکتر فاطمه رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2024/2/iQOUi3QeWg9JzK7km3DyCW30EjLxuUB0OEPeHX6z.jpg",
     expertise: "پزشکی طب خواب",
     services: ["درمان اختلالات خواب", "درمان خروپف"],
     plural: ["tell", "inPerson"],
@@ -351,6 +380,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 30,
     name: "دکتر محسن احمدی",
+    avatar: "",
     expertise: "پزشکی طب پیشگیری",
     services: ["غربالگری سرطان", "پیشگیری از بیماری‌های قلبی"],
     plural: ["online", "tell"],
@@ -362,6 +392,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 31,
     name: "دکتر زهرا رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/ZONRuntEfqD05OcAgxIpAHnxBPXPICUdrTVd6MhQ.jpg",
     expertise: "پزشکی طب اعتیاد",
     services: ["درمان اعتیاد", "سم‌زدایی"],
     plural: ["inPerson", "online"],
@@ -373,6 +404,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 32,
     name: "دکتر رضا حسینی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2024/4/DSfvYoriUTkiH3SZdm6EE1d5qqMPN6IwwZAOUtKj.jpg",
     expertise: "پزشکی طب سفر",
     services: ["واکسیناسیون مسافرت", "درمان بیماری‌های مناطق گرمسیری"],
     plural: ["tell", "inPerson"],
@@ -384,6 +416,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 33,
     name: "دکتر نسرین کریمی",
+    avatar: "",
     expertise: "پزشکی طب سالمندان",
     services: ["درمان پوکی استخوان", "درمان آلزایمر"],
     plural: ["online", "tell"],
@@ -395,6 +428,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 34,
     name: "دکتر علی احمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/JxSxC9T0HsszpfdxyhQnC5IJEQxNs0cwN0F0N9hg.jpg",
     expertise: "پزشکی طب کار",
     services: ["معاینات دوره‌ای", "درمان بیماری‌های شغلی"],
     plural: ["inPerson", "online"],
@@ -406,6 +440,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 35,
     name: "دکتر فاطمه موسوی",
+    avatar: "",
     expertise: "پزشکی طب سوزنی",
     services: ["درمان دردهای مزمن", "درمان میگرن"],
     plural: ["tell", "inPerson"],
@@ -417,6 +452,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 36,
     name: "دکتر محسن رضایی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2022/1/2UDIk8QvASiNJ4LAymryrhTFrRq9QBLNmQO6eAYE.jpg",
     expertise: "پزشکی طب سنتی",
     services: ["درمان با گیاهان دارویی", "حجامت"],
     plural: ["online", "tell"],
@@ -428,6 +464,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 37,
     name: "دکتر زهرا احمدی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2024/9/DPjlu7uWJNfdntqMHg8AyJvIqnrdcETo4P5lyDgq.jpg",
     expertise: "پزشکی اورژانس",
     services: ["مدیریت تروما", "احیای قلبی ریوی"],
     plural: ["inPerson", "online"],
@@ -439,6 +476,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 38,
     name: "دکتر رضا کریمی",
+    avatar: "",
     expertise: "پزشکی آلرژی و ایمونولوژی",
     services: ["درمان آلرژی", "درمان آسم"],
     plural: ["tell", "inPerson"],
@@ -450,6 +488,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 39,
     name: "دکتر نسرین حسینی",
+    avatar: "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2024/10/2TGQCVLRjX3IWaLl4egGSbByur241iDF1eEAPWc1.jpg",
     expertise: "پزشکی روانپزشکی",
     services: ["درمان افسردگی", "درمان اضطراب"],
     plural: ["online", "tell"],
@@ -461,6 +500,7 @@ export const doctors: DoctorModel[] = [
   {
     id: 40,
     name: "دکتر علی موسوی",
+    avatar: "",
     expertise: "پزشکی طب پیشگیری",
     services: ["غربالگری سرطان", "پیشگیری از بیماری‌های قلبی"],
     plural: ["inPerson", "online"],

@@ -20,7 +20,7 @@ import ClearFiltersButton from "./components/clear-filters-button/ClearFiltersBu
 import RadioButtonComponent from "@/components/radio-button/radio-button.component";
 
 type SearchPageProps = {
-  searchParams: { query?: string };
+  searchParams: { [query: string]:string | string[] | undefined };
 };
 
 export default function page({ searchParams }: SearchPageProps): ReactElement {

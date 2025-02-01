@@ -39,6 +39,8 @@
   --white-color: hsl(0, 0%, 100%);
 
   --button-hover: var(--color-primary-darker);
+
+  --progress-bar: hsl(46.3deg 100% 50%);
 }
 
 :root[data-theme="dark"] {

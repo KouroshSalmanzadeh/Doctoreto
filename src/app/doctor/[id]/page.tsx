@@ -134,8 +134,9 @@ export default function Page({ params }: Props): ReactElement {
                                     options={[
                                         { id: "relevant", value: "مرتبط ترین" },
                                         { id: "popular", value: "محبوب ترین" },
-                                        { id: "Newest", value: "جدید ترین" },
+                                        { id: "newest", value: "جدید ترین" },
                                     ]}
+                                    contextType='comments'
                                 />
                                 <SearchCommentsComponents
                                     id={"search-comments"}

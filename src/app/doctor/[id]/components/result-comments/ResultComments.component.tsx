@@ -48,22 +48,22 @@ export default function ResultCommentsComponent({ doctorId }: Props) {
         }
 
         // اعمال مرتب‌سازی
-        // switch (filterCommnets.sortBy) {
-        //     case 'relevant':
-        //         // مرتب‌سازی بر اساس مرتبط‌ترین (مثلاً تعداد لایک‌ها)
-        //         result.sort((a, b) => b.likes - a.likes);
-        //         break;
-        //     case 'popular':
-        //         // مرتب‌سازی بر اساس محبوب‌ترین (مثلاً تعداد لایک‌ها)
-        //         result.sort((a, b) => b.likes - a.likes);
-        //         break;
-        //     case 'Newest':
-        //         // مرتب‌سازی بر اساس جدیدترین (مثلاً تاریخ ایجاد)
-        //         result.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-        //         break;
-        //     default:
-        //         break;
-        // }
+        switch (filterCommnets.sortBy) {
+            case 'relevant':
+                // مرتب‌سازی بر اساس مرتبط‌ترین (مثلاً تعداد لایک‌ها)
+                result = result.filter(comment => comment.Related);
+                break;
+            case 'popular':
+                // مرتب‌سازی بر اساس محبوب‌ترین (مثلاً تعداد لایک‌ها)
+                result.sort((a, b) => b.likes - a.likes);
+                break;
+            case 'newest':
+                // مرتب‌سازی بر اساس جدیدترین (مثلاً تاریخ ایجاد)
+                result.sort((a, b) => new Date(b.createdDay).getTime() - new Date(a.createdDay).getTime());
+                break;
+            default:
+                break;
+        }
 
         return result;
     }, [filteredComments, filterCommnets.sortBy, filterCommnets.query]);

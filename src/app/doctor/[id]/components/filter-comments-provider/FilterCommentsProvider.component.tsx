@@ -8,7 +8,7 @@ import { FilterComments } from '../../types/filter-comments';
 
 type FilterCommentsContextType = {
   filterCommnets: FilterComments;
-  dispatch: React.Dispatch<Action>;
+  dispatchComments: React.Dispatch<Action>;
 }
 
 type Props = {
@@ -17,15 +17,15 @@ type Props = {
 
 export const FilterCommentsContext = createContext<FilterCommentsContextType>({
   filterCommnets: initialState,
-  dispatch: () => { },
+  dispatchComments: () => { },
 });
 
 
 export default function FilterCommentsProviderComponent({ children }: Props) {
-  const [filterCommnets, dispatch] = useReducer(FilterCommentsReduceer, initialState);
+  const [filterCommnets, dispatchComments] = useReducer(FilterCommentsReduceer, initialState);
 
   return (
-    <FilterCommentsContext.Provider value={{ filterCommnets, dispatch }}>
+    <FilterCommentsContext.Provider value={{ filterCommnets, dispatchComments }}>
       {children}
     </FilterCommentsContext.Provider>
   );

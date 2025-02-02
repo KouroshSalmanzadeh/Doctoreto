@@ -16,17 +16,17 @@ type Props = {
 
 export default function SearchCommentsComponents({ id, label, placeholder}: Props) {
     const [searchTerm, setSearchTerm] = useState<string>("");
-    const { dispatch } = useContext(FilterCommentsContext);
+    const { dispatchComments } = useContext(FilterCommentsContext);
 
     const handleSearch = (e:React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setSearchTerm(value);
-        dispatch({type: "update_filter", key:'query', payload: value});
+        dispatchComments({type: "update_filter", key:'query', payload: value});
     }
 
     const handleClear = () => {
         setSearchTerm("");
-        dispatch({type: "update_filter", key:'query', payload: ""});
+        dispatchComments({type: "update_filter", key:'query', payload: ""});
     }
 
     return (

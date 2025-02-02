@@ -47,6 +47,7 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
                 id="expertises"
                 name="expertises"
                 options={specialties}
+                contextType="main"
               />
             </div>
             <div className={styles.card}>
@@ -56,6 +57,7 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
                 id="services"
                 name="services"
                 options={services}
+                contextType="main"
               />
             </div>
             <div className={`${styles.card} ${styles["radio-buttons"]}`}>

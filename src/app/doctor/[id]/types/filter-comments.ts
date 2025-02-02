@@ -1,5 +1,4 @@
 export type FilterComments = {
-    sortBy: string;
-    query: string | "";
-  };
-  
+  sortBy: "relevant" | "popular" | "newest" | "";
+  query: string | "";
+};

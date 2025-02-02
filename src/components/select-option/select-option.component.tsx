@@ -16,7 +16,7 @@ type Props = {
   name: string;
   id: string;
   options: {
-    id: number;
+    id: string | number;
     value: string;
   }[];
   label?: string;

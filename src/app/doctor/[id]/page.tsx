@@ -7,8 +7,16 @@ import { doctors } from '@/mock/docrorDetails';
 
 import styles from './doctorDetails.module.css';
 
-import MingcuteCalendarTimeAddLine from '@/icons/MingcuteCalendarTimeAddLine';
 import ButtonComponent from '@/components/button/button.component';
+
+import ProgressBarComponent from '@/components/progress-bar/ProgressBar.component';
+import SelectOptionComponent from '@/components/select-option/select-option.component';
+
+import FilterCommentsProviderComponent from './components/filter-comments-provider/FilterCommentsProvider.component';
+import ResultCommentsComponent from './components/result-comments/ResultComments.component';
+import SearchCommentsComponents from './components/search-comments/SearchComments.components';
+
+import MingcuteCalendarTimeAddLine from '@/icons/MingcuteCalendarTimeAddLine';
 import MingcutePhoneCallLine from '@/icons/MingcutePhoneCallLine';
 import MingcuteChat1Line from '@/icons/MingcuteChat1Line';
 import MingcuteHospitalLine from '@/icons/MingcuteHospitalLine';
@@ -16,10 +24,10 @@ import MingcuteCertificate2Line from '@/icons/MingcuteCertificate2Line';
 import MingcuteLocationLine from '@/icons/MingcuteLocationLine';
 import MingcuteInformationLine from '@/icons/MingcuteInformationLine';
 import MingcuteCertificateLine from '@/icons/MingcuteCertificateLine';
-import ProgressBarComponent from '@/components/progress-bar/ProgressBar.component';
 import MingcuteStarLine from '@/icons/MingcuteStarLine';
 import MingcuteTimeDurationLine from '@/icons/MingcuteTimeDurationLine';
 import MingcuteCheckCircleLine from '@/icons/MingcuteCheckCircleLine';
+
 
 type Props = {
     params: { id: string };
@@ -115,8 +123,28 @@ export default function Page({ params }: Props): ReactElement {
                     </div>
 
                     {/* Comments */}
-                    <div>
-                        
+                    <div className={styles["comments-provider"]}>
+                        <FilterCommentsProviderComponent>
+                            <div className={styles["filter-search"]}>
+                                <SelectOptionComponent
+                                    id='sort-comments'
+                                    name='sort-comments'
+                                    label='فیلتر نظرات:'
+                                    placeholder='مثال: جدیدترین'
+                                    options={[
+                                        { id: "relevant", value: "مرتبط ترین" },
+                                        { id: "popular", value: "محبوب ترین" },
+                                        { id: "Newest", value: "جدید ترین" },
+                                    ]}
+                                />
+                                <SearchCommentsComponents
+                                    id={"search-comments"}
+                                    label={"جستجو در نظرات:"}
+                                    placeholder='مثال: تیروئید پرکار...'
+                                />
+                            </div>
+                            <ResultCommentsComponent doctorId={+params.id} />
+                        </FilterCommentsProviderComponent>
                     </div>
                 </div>
 

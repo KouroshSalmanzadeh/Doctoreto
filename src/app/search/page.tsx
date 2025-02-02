@@ -20,7 +20,7 @@ import ClearFiltersButton from "./components/clear-filters-button/ClearFiltersBu
 import RadioButtonComponent from "@/components/radio-button/radio-button.component";
 
 type SearchPageProps = {
-  searchParams: { query?: string };
+  searchParams: { [query: string]: string | string[] | undefined };
 };
 
 export default function page({ searchParams }: SearchPageProps): ReactElement {
@@ -47,6 +47,7 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
                 id="expertises"
                 name="expertises"
                 options={specialties}
+                contextType="main"
               />
             </div>
             <div className={styles.card}>
@@ -56,6 +57,17 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
                 id="services"
                 name="services"
                 options={services}
+                contextType="main"
+              />
+            </div>
+            <div className={`${styles.card} ${styles["radio-buttons"]}`}>
+              <span>جنسیت پزشک</span>
+              <RadioButtonComponent
+                name="gender"
+                inputs={[
+                  { id: "male", value: "مرد" },
+                  { id: "female", value: "خانم" },
+                ]}
               />
             </div>
             <div className={`${styles.card} ${styles["radio-buttons"]}`}>

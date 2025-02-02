@@ -74,7 +74,11 @@ export default function FilterResultComponent() {
             <div className={styles.info_container}>
               <div className={styles.right_box}>
                 <span className={styles.profile}>
-                  <MingcuteUser3Fill />
+                  {doctor.avatar ? (
+                    <Image width={72} height={72} src={doctor.avatar} alt="" />
+                  ) : (
+                    <MingcuteUser3Fill />
+                  )}
                 </span>
                 <div className={styles.rate}>
                   <span>
@@ -108,7 +112,7 @@ export default function FilterResultComponent() {
                 </p>
               </div>
             </div>
-            <Link href={"#"} className={styles.view_profile}>
+            <Link href={`doctor/${doctor.id}`} className={styles.view_profile}>
               <span>مشاهده پروفایل</span>
               <MingcuteLeftFill />
             </Link>

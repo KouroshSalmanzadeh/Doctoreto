@@ -8,55 +8,88 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
+
 import styles from "./select-option.module.css";
+
 import MingcuteCloseFill from "@/icons/MingcuteCloseFill";
+
 import { FilterContext } from "@/app/search/components/filter/filter-provider.component";
+
+import { FilterCommentsContext } from "@/app/doctor/[id]/components/filter-comments-provider/FilterCommentsProvider.component";
+import { FilterComments } from "@/app/doctor/[id]/types/filter-comments";
 
 type Props = {
   name: string;
   id: string;
   options: {
-    id: number;
+    id: string | number;
     value: string;
   }[];
+  contextType: "main" | "comments";
   label?: string;
 } & React.ComponentPropsWithoutRef<"input">;
 
 const SelectOptionComponent = React.memo(
-  ({ name, id, options, label, ...props }: Props): ReactElement => {
+  ({
+    name,
+    id,
+    options,
+    label,
+    contextType,
+    ...props
+  }: Props): ReactElement => {
     const [isOpen, setIsOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
 
     const { filters, dispatch } = useContext(FilterContext);
+    const { dispatchComments } = useContext(FilterCommentsContext);
 
-    // Memoized filtered options
     const filteredOptions = useMemo(() => {
       return options.filter((option) => option.value.includes(searchTerm));
     }, [options, searchTerm]);
 
-    // Handle selection of an option
     const handleSelect = useCallback(
-      (value: string) => {
+      (item: { id: string | number; value: string }) => {
         setIsOpen(false);
-        setSearchTerm(value);
-        if (id === "expertises") {
-          dispatch({ type: "update_filter", key: "expertise", payload: value });
-        } else if (id === "services") {
-          dispatch({ type: "update_filter", key: "service", payload: value });
+        setSearchTerm(item.value);
+        if (contextType === "main") {
+          if (id === "expertises") {
+            dispatch({
+              type: "update_filter",
+              key: "expertise",
+              payload: item.value,
+            });
+          } else if (id === "services") {
+            dispatch({
+              type: "update_filter",
+              key: "service",
+              payload: item.value,
+            });
+          }
+        } else {
+          dispatchComments({
+            type: "update_filter",
+            key: "sortBy",
+            payload: item.id as FilterComments["sortBy"],
+          });
         }
       },
-      [dispatch, id],
+      [dispatch, dispatchComments, id],
     );
 
     // Handle clearing the search term
     const handleClear = useCallback(() => {
       setSearchTerm("");
-      if (id === "expertises") {
-        dispatch({ type: "remove_filter", key: "expertise" });
-      } else if (id === "services") {
-        dispatch({ type: "remove_filter", key: "service" });
+      if (contextType === "main") {
+        if (id === "expertises") {
+          dispatch({ type: "remove_filter", key: "expertise" });
+        } else if (id === "services") {
+          dispatch({ type: "remove_filter", key: "service" });
+        }
+      } else {
+        dispatchComments({ type: "remove_filter", key: "sortBy" });
       }
-    }, [dispatch, id]);
+    }, [dispatch, dispatchComments, id]);
 
     // Clear expertises input when service input is filled
     useEffect(() => {
@@ -103,7 +136,7 @@ const SelectOptionComponent = React.memo(
               {filteredOptions.length > 0 ? (
                 filteredOptions.map((item) => (
                   <li
-                    onMouseDown={() => handleSelect(item.value)}
+                    onMouseDown={() => handleSelect(item)}
                     className={styles.item}
                     key={item.id}
                     value={item.value}
@@ -124,6 +157,6 @@ const SelectOptionComponent = React.memo(
   },
 );
 
-SelectOptionComponent.displayName = "SelectOptionComponent"; // برای رفع ارور ESLint
+SelectOptionComponent.displayName = "SelectOptionComponent";
 
 export default SelectOptionComponent;

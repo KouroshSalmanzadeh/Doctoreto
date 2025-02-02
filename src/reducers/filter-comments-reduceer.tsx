@@ -4,7 +4,7 @@ export type Action =
   | {
       type: "update_filter";
       key: keyof FilterComments;
-      payload: FilterComments["sortBy"];
+      payload: string;
     }
   | {
       type: "remove_filter";

@@ -1,15 +1,18 @@
-"use client"
+"use client";
 
-import React, { createContext, ReactNode, useReducer } from 'react'
+import React, { createContext, ReactNode, useReducer } from "react";
 
-import FilterCommentsReduceer, { Action, initialState } from '@/reducers/filter-comments-reduceer';
+import FilterCommentsReduceer, {
+  Action,
+  initialState,
+} from "@/reducers/filter-comments-reduceer";
 
-import { FilterComments } from '../../types/filter-comments';
+import { FilterComments } from "../../types/filter-comments";
 
 type FilterCommentsContextType = {
   filterCommnets: FilterComments;
   dispatchComments: React.Dispatch<Action>;
-}
+};
 
 type Props = {
   children: ReactNode;
@@ -17,15 +20,19 @@ type Props = {
 
 export const FilterCommentsContext = createContext<FilterCommentsContextType>({
   filterCommnets: initialState,
-  dispatchComments: () => { },
+  dispatchComments: () => {},
 });
 
-
 export default function FilterCommentsProviderComponent({ children }: Props) {
-  const [filterCommnets, dispatchComments] = useReducer(FilterCommentsReduceer, initialState);
+  const [filterCommnets, dispatchComments] = useReducer(
+    FilterCommentsReduceer,
+    initialState,
+  );
 
   return (
-    <FilterCommentsContext.Provider value={{ filterCommnets, dispatchComments }}>
+    <FilterCommentsContext.Provider
+      value={{ filterCommnets, dispatchComments }}
+    >
       {children}
     </FilterCommentsContext.Provider>
   );

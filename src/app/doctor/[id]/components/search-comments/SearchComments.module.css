@@ -1,49 +1,49 @@
 .search {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-    position: relative;
+  position: relative;
 
-    label {
-        font-size: var(--fz-400);
-        font-weight: 600;
+  label {
+    font-size: var(--fz-400);
+    font-weight: 600;
+  }
+
+  input {
+    border-radius: 8px;
+
+    font-weight: 300;
+
+    padding: 0.5rem 1rem;
+
+    background-color: var(--color-gray-12);
+    color: var(--color-gray-98);
+
+    outline: none;
+    border: none;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+
+      background-color: var(--color-primary-fade);
     }
+  }
 
-    input {
-        border-radius: 8px;
+  svg {
+    position: absolute;
 
-        font-weight: 300;
+    left: 5%;
+    top: 62%;
 
-        padding: 0.5rem 1rem;
+    cursor: pointer;
 
-        background-color: var(--color-gray-12);
-        color: var(--color-gray-98);
+    transition: all ease 0.2s;
 
-        outline: none;
-        border: none;
+    &:hover {
+      transform: rotate(90deg) scale(1.5);
 
-        &:focus {
-            outline: 2px solid var(--color-primary);
-
-            background-color: var(--color-primary-fade);
-        }
+      color: var(--color-primary);
     }
-
-    svg {
-        position: absolute;
-
-        left: 5%;
-        top: 62%;
-
-        cursor: pointer;
-
-        transition: all ease 0.2s;
-
-        &:hover {
-            transform: rotate(90deg) scale(1.5);
-
-            color: var(--color-primary);
-        }
-    }
+  }
 }

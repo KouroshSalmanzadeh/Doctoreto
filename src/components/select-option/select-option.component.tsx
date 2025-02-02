@@ -25,12 +25,19 @@ type Props = {
     id: string | number;
     value: string;
   }[];
-  contextType: 'main' | 'comments';
+  contextType: "main" | "comments";
   label?: string;
 } & React.ComponentPropsWithoutRef<"input">;
 
 const SelectOptionComponent = React.memo(
-  ({ name, id, options, label, contextType, ...props }: Props): ReactElement => {
+  ({
+    name,
+    id,
+    options,
+    label,
+    contextType,
+    ...props
+  }: Props): ReactElement => {
     const [isOpen, setIsOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -47,12 +54,24 @@ const SelectOptionComponent = React.memo(
         setSearchTerm(item.value);
         if (contextType === "main") {
           if (id === "expertises") {
-            dispatch({ type: "update_filter", key: "expertise", payload: item.value });
+            dispatch({
+              type: "update_filter",
+              key: "expertise",
+              payload: item.value,
+            });
           } else if (id === "services") {
-            dispatch({ type: "update_filter", key: "service", payload: item.value });
+            dispatch({
+              type: "update_filter",
+              key: "service",
+              payload: item.value,
+            });
           }
         } else {
-          dispatchComments({ type: "update_filter", key: "sortBy", payload: item.id as  FilterComments["sortBy"]});
+          dispatchComments({
+            type: "update_filter",
+            key: "sortBy",
+            payload: item.id as FilterComments["sortBy"],
+          });
         }
       },
       [dispatch, dispatchComments, id],

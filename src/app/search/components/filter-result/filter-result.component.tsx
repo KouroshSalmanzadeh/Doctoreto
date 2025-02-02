@@ -34,6 +34,8 @@ export default function FilterResultComponent() {
         filters.expertise === "" || doctor.expertise === filters.expertise;
       const matchesService =
         filters.service === "" || doctor.services.includes(filters.service);
+      const matchesGender =
+        filters.gender === "" || doctor.gender === filters.gender;
       const matchesQuery =
         !filters.query ||
         Object.values({
@@ -44,12 +46,14 @@ export default function FilterResultComponent() {
         }).some((field) => field.includes(filters.query));
 
       return (
-        matchesServiceType && matchesExpertise && matchesService && matchesQuery
+        matchesServiceType &&
+        matchesExpertise &&
+        matchesService &&
+        matchesGender &&
+        matchesQuery
       );
     });
-  }, [filters.service, filters.plural, filters.expertise, filters.query]);
-
-  console.log(filters);
+  }, [filters]);
 
   if (filteredDoctors.length === 0) {
     return (

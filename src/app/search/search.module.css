@@ -43,14 +43,27 @@
       }
     }
 
-    .type_search {
-      margin-bottom: 1.5rem;
-    }
+    .filter_items {
+      .type_search {
+        margin-bottom: 1.5rem;
+      }
 
-    .card:not(:last-child) {
-      border-bottom: 1px solid var(--color-gray-16);
-      margin-bottom: 1rem;
-      padding-bottom: 1.5rem;
+      .card:not(:last-child) {
+        border-bottom: 1px solid var(--color-gray-16);
+        margin-bottom: 1rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .radio-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        span {
+          font-size: var(--fz-400);
+          font-weight: 600;
+        }
+      }
     }
   }
 

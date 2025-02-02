@@ -17,6 +17,7 @@ import services from "@/mock/services.json";
 import FilterBadgesComponent from "./components/filter-badges/filter-badges.component";
 import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
 import ClearFiltersButton from "./components/clear-filters-button/ClearFiltersButton";
+import RadioButtonComponent from "@/components/radio-button/radio-button.component";
 
 type SearchPageProps = {
   searchParams: { query?: string };
@@ -55,6 +56,16 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
                 id="services"
                 name="services"
                 options={services}
+              />
+            </div>
+            <div className={`${styles.card} ${styles["radio-buttons"]}`}>
+              <span className="">جنسیت پزشک</span>
+              <RadioButtonComponent
+                name="gender"
+                inputs={[
+                  { id: "male", value: "مرد" },
+                  { id: "female", value: "خانم" },
+                ]}
               />
             </div>
           </div>

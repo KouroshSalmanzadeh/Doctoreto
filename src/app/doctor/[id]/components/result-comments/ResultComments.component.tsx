@@ -6,18 +6,18 @@ import styles from "./resultComments.module.css";
 
 import Image from "next/image";
 
+import { FilterCommentsContext } from "../filter-comments-provider/FilterCommentsProvider.component";
+
 import { CommentModel } from "@/models/comment.model";
 import { comments } from "@/mock/comments";
 
 import NotfoundSearch from "@/assets/illastrations/not-found-search.svg";
 import MingcuteUser3Fill from "@/icons/MingcuteUser3Fill";
 import MingcuteStarFill from "@/icons/MingcuteStarFill";
-import MingcuteHeartLine from "@/icons/MingcuteHeartLine";
-import MingcuteHeartFill from "@/icons/MingcuteHeartFill";
-import MingcuteShare2Line from "@/icons/MingcuteShare2Line";
 import SolarLikeBold from "@/icons/SolarLikeBold";
-
-import { FilterCommentsContext } from "../filter-comments-provider/FilterCommentsProvider.component";
+import SolarHeartOutline from "@/icons/SolarHeartOutline";
+import SolarHeartBold from "@/icons/SolarHeartBold";
+import SolarShareOutline from "@/icons/SolarShareOutline";
 
 type Props = {
   doctorId: number;
@@ -129,13 +129,13 @@ export default function ResultCommentsComponent({ doctorId }: Props) {
                   {comment.likes + (likedComments[comment.id] ? 1 : 0)}
                 </span>
                 {likedComments[comment.id] ? (
-                  <MingcuteHeartFill />
+                  <SolarHeartBold />
                 ) : (
-                  <MingcuteHeartLine />
+                  <SolarHeartOutline />
                 )}
               </div>
               <div className={styles["share-button"]}>
-                <MingcuteShare2Line />
+                <SolarShareOutline />
               </div>
             </div>
           </div>

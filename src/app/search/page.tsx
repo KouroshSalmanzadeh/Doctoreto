@@ -65,7 +65,7 @@ export default function page({ searchParams }: SearchPageProps): ReactElement {
               <RadioButtonComponent
                 name="gender"
                 inputs={[
-                  { id: "male", value: "مرد" },
+                  { id: "male", value: "آقا" },
                   { id: "female", value: "خانم" },
                 ]}
               />

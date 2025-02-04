@@ -10,8 +10,9 @@
   border: none;
 
   background-color: var(--color-secondary);
+  color: var(--white-color);
 
-  opacity: 0.6;
+  opacity: 1;
 
   box-shadow: var(--box-shadow-lg);
 
@@ -22,6 +23,6 @@
   font-size: var(--fz-300);
 
   &:hover {
-    opacity: 1;
+    opacity: 0.6;
   }
 }

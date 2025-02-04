@@ -49,7 +49,7 @@ export const doctors: DoctorModel[] = [
     id: 4,
     name: "دکتر زهرا حسینی",
     avatar:
-      "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/cwLjGvJuCLLs1gwidcB4jxteoW3NOT4sSuz4Lvyc.jpg",
+      "https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2024/1/oec6fhGRboz6GhAZzqPQYO1YSAisxUMPmJqGWiaz.jpg",
     expertise: "زنان و زایمان",
     services: ["درمان ناباروری", "جراحی زیبایی زنان"],
     plural: ["tell", "inPerson"],

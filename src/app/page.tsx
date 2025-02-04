@@ -13,7 +13,7 @@ export default function Home(): ReactElement {
     <div className={styles.home}>
       <h1>
         <DoctoretoLogo />
-        دکتر من
+        دُکترتو
       </h1>
       <GlobalSearchBoxComponent />
       <div className={styles.history}>

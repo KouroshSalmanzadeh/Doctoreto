@@ -14,7 +14,7 @@
 
     padding: 1.5rem;
 
-    background-color: var(--color-gray-10);
+    background-color: var(--bg-card);
 
     border-radius: 2rem;
 
@@ -72,7 +72,7 @@
           }
 
           font-size: var(--fz-400);
-          color: var(--color-gray-30);
+          color: var(--color-gray-80);
         }
 
         .doctor-name {
@@ -165,7 +165,7 @@
         }
 
         .services-list {
-          color: var(--color-gray-30);
+          color: var(--color-gray-80);
 
           padding-right: 1.25rem;
 
@@ -229,7 +229,7 @@
         padding-bottom: 1.5rem;
         margin-bottom: 1.5rem;
 
-        border-bottom: 2px dashed var(--color-gray-12);
+        border-bottom: 2px dashed var(--bg-badge);
 
         color: var(--color-gray-30);
 
@@ -246,7 +246,7 @@
           );
           background-size: 300%;
 
-          border: 2px solid var(--color-gray-12);
+          border: 2px solid var(--bg-select-option);
 
           box-shadow: var(--box-shadow-normal);
 
@@ -323,7 +323,7 @@
 
       border-radius: 3rem;
 
-      background-color: var(--color-gray-10);
+      background-color: var(--bg-card);
 
       box-shadow: var(--box-shadow-normal);
 
@@ -350,7 +350,7 @@
         .badge-item {
           padding: 0.25rem 0.5rem;
 
-          background-color: var(--color-gray-12);
+          background-color: var(--bg-badge);
 
           border-radius: 999rem;
 
@@ -371,7 +371,7 @@
         font-weight: 600;
 
         span {
-          color: var(--color-gray-30);
+          color: var(--color-gray-70);
           font-weight: 400;
         }
       }
@@ -386,7 +386,7 @@
 
       .service-type-item {
         padding: 1rem;
-        border: 2px solid var(--color-gray-12);
+        border: 2px solid var(--bg-select-option);
         border-radius: 2rem;
 
         h3 {

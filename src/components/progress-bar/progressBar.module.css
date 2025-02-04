@@ -3,6 +3,7 @@
 
   label {
     font-size: var(--fz-300);
+    color: var(--color-gray-80);
   }
 
   .progressbar {
@@ -57,6 +58,8 @@
       gap: 0.25rem;
 
       font-size: var(--fz-400);
+
+      color: var(--color-gray-80);
 
       svg {
         width: 1.5rem;

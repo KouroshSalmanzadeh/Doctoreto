@@ -11,7 +11,12 @@ import MingcuteCloseFill from "@/icons/MingcuteCloseFill";
 export default function FilterBadgesComponent() {
   const { filters, dispatch } = useContext(FilterContext);
 
-  if (!filters.service && !filters.expertise && !filters.query) {
+  if (
+    !filters.service &&
+    !filters.expertise &&
+    !filters.query &&
+    !filters.gender
+  ) {
     return null;
   }
 
@@ -41,6 +46,15 @@ export default function FilterBadgesComponent() {
           className={styles.badge}
         >
           {filters.query}
+          <MingcuteCloseFill />
+        </span>
+      ) : null}
+      {filters.gender ? (
+        <span
+          onClick={() => dispatch({ type: "remove_filter", key: "gender" })}
+          className={styles.badge}
+        >
+          {filters.gender === "male" ? "آقا" : "خانم"}
           <MingcuteCloseFill />
         </span>
       ) : null}
